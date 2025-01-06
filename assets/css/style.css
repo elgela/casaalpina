@@ -235,19 +235,21 @@ textarea {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	list-style-type: none;
 	text-align: center;
-	/* padding: 20px; */
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+	background-color: #2a2828;
 }
 
 .label-detalles {
-	/* padding-top: 20%; */
-	/* padding-bottom: 30px; */
+	background-color: #2a2828;
 	margin: 0;
 	text-align: center;
 	font-size: xx-large;
 	font-family: serif;
 	color: wheat;
+}
+
+.detalles ul li {
+	font-size: large;
 }
 
 #cab1 ul,
@@ -499,7 +501,7 @@ p#interior {
 
 .titulo {
 	margin: 10px 0;
-	background-color: #2a28288d;
+	background-color: #2a2828;
 }
 
 .titulo h1 {
@@ -611,70 +613,6 @@ p#interior {
 .first_p {
 	border-top: 2.5px solid #ffff;
 	padding-top: 10px;
-}
-
-.estrella-arribaIzq {
-	display: grid;
-	position: absolute;
-	left: 25px;
-	top: 15px;
-	zoom: 40%;
-	filter: brightness(70%);
-}
-
-.estrella-arribaDer {
-	display: grid;
-	position: absolute;
-	right: 25px;
-	top: -20px;
-	zoom: 40%;
-	rotate: -6deg;
-	filter: brightness(70%);
-	overflow: hidden;
-}
-
-.estrella-abajoIzq {
-	display: grid;
-	position: absolute;
-	left: 25px;
-	bottom: 30px;
-	zoom: 40%;
-	filter: brightness(70%);
-}
-
-.estrella-abajoDer {
-	display: grid;
-	position: absolute;
-	right: 25px;
-	bottom: 20px;
-	zoom: 40%;
-	filter: brightness(70%);
-}
-
-.navidad {
-	display: grid;
-	position: absolute;
-	left: 5%;
-	top: 30px;
-	zoom: 150%;
-	overflow: hidden;
-	rotate: -20deg;
-}
-
-.new-year {
-	display: grid;
-	position: absolute;
-	overflow: hidden;
-	right: 2%;
-	zoom: 200%;
-	top: -10px;
-	rotate: 20deg;
-}
-
-#guirnalda {
-	display: grid;
-	width: 100%;
-	margin-top: -90px;
 }
 
 /* Basic */
@@ -959,14 +897,6 @@ h6 {
 	margin-top: 25px;
 	margin-bottom: -20px;
 	font-size: large;
-}
-
-#guirnalda-cabanias {
-	position: relative;
-	display: grid;
-	top: -80px;
-	width: 95%;
-	left: 0;
 }
 
 .more600 {
@@ -2032,11 +1962,6 @@ body.is-preload #bg:before {
 		display: none;
 	}
 
-	#guirnalda-cabanias {
-		top: -70px;
-	}
-
-
 }
 
 @media screen and (max-width: 736px) {
@@ -2309,43 +2234,6 @@ body.is-preload #header .content .inner {
 		height: 100%;
 	}
 
-	.navidad {
-		zoom: 100%;
-	}
-
-	.new-year {
-		zoom: 120%;
-	}
-
-	#guirnalda-cabanias {
-		top: -60px;
-	}
-
-	/* .content-all {
-		width: 700px;
-		height: 470px;
-	} */
-
-}
-
-@media screen and (max-width: 850px) {
-	#guirnalda-cabanias {
-		top: -50px;
-	}
-
-	/* .content-all {
-		width: 650px;
-		height: 420px;
-	} */
-
-	/* #cab1 img,
-	#cab2 img,
-	#cab3 img,
-	#cab4 img {
-		width: 90%;
-	} */
-
-
 }
 
 @media screen and (max-width: 736px) {
@@ -2420,24 +2308,9 @@ body.is-preload #header .content .inner {
 		font-size: medium;
 	}
 
-	.navidad {
-		zoom: 80%;
-		left: 5%;
+	.detalles ul li {
+		font-size: inherit;
 	}
-
-	.new-year {
-		zoom: 100%;
-		margin-right: -20px;
-	}
-
-	#guirnalda-cabanias {
-		top: -50px;
-	}
-
-	/* .content-all {
-		width: 520px;
-		height: 410px;
-	} */
 
 }
 
@@ -2669,9 +2542,7 @@ body.is-preload #header .content .inner {
 	}
 
 	.detalles {
-		/* margin-top: 100px; */
 		display: grid;
-		/* grid-template-columns: repeat(2, minmax(0, 1fr)); */
 	}
 
 	.label-detalles {
@@ -2680,20 +2551,6 @@ body.is-preload #header .content .inner {
 		margin-top: 10%;
 		text-align: center;
 		font-size: x-large;
-	}
-
-	.navidad {
-		zoom: 65%;
-		margin-left: -200px;
-	}
-
-	.new-year {
-		zoom: 80%;
-		margin-right: -180px;
-	}
-
-	#guirnalda-cabanias {
-		top: -40px;
 	}
 	
 	#des2 {
@@ -2792,11 +2649,6 @@ body.is-preload #header .content .inner {
 		font-size: 200%;
 	}
 
-	#guirnalda-cabanias {
-		top: -30px;
-	}
-
-
 }
 
 @media screen and (max-width: 481px) {
@@ -2835,21 +2687,6 @@ body.is-preload #header .content .inner {
 	.mail p {
 		font-size: x-small;
 	}
-
-	.navidad {
-		zoom: 60%;
-		left: 15%;
-	}
-
-	.new-year {
-		zoom: 80%;
-		right: 10%;
-	}
-
-	/* .content-all {
-		width: 380px;
-		height: 350px;
-	} */
 
 	.volver-cab_fotos {
 		margin-top: -3rem;
@@ -2896,19 +2733,6 @@ body.is-preload #header .content .inner {
 		line-height: 1.4;
 	}
 
-	.navidad {
-		zoom: 50%;
-		left: 10%;
-		top: 7%;
-	}
-
-	.new-year {
-		zoom: 70%;
-		right: 15%;
-		right: 5%;
-		top: 10%;
-	}
-
 	.content-img {
 		height: 70%;
 	}
@@ -2950,18 +2774,6 @@ body.is-preload #header .content .inner {
 		zoom: 72%;
 	}
 
-	/* #cab1 img,
-	#cab2 img,
-	#cab3 img,
-	#cab4 img {
-		height: 350px;
-	} */
-
-	#guirnalda-cabanias {
-		top: -20px;
-	}
-
-
 }
 
 @media screen and (max-width: 411px) {
@@ -2974,17 +2786,7 @@ body.is-preload #header .content .inner {
 
 }
 
-/* @media screen and (max-width: 409px) {
-	.drop {
-		top: 44.5rem;
-	}
-} */
-
-
 @media screen and (max-width: 400px) {
-	/* .drop {
-		top: 44.5rem;
-	} */
 
 	h1 {
 		font-size: 2rem;
