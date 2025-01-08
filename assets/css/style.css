@@ -2316,7 +2316,7 @@ body.is-preload #header .content .inner {
 	#cab2 img,
 	#cab3 img,
 	#cab4 img {
-		height: 80%;
+		height: 100%;
 	}
 
 	.nav-list {
@@ -2389,7 +2389,7 @@ body.is-preload #header .content .inner {
 
 	.div-buttons {
 		position: absolute;
-		margin: 50% 0 0 30%;
+		margin: 60% 0 0 30%;
 		align-items: center;
 	}
 
@@ -2414,7 +2414,7 @@ body.is-preload #header .content .inner {
 	}
 
 	.label-detalles {
-		margin-top: 10%;
+		margin-top: 20%;
 		text-align: center;
 		font-size: x-large;
 	}
