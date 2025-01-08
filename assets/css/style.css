@@ -772,8 +772,16 @@ i {
 	font-style: italic;
 }
 
+h3 {
+	color: #fffffff3;
+	font-weight: 600;
+	line-height: 1.5;
+	margin: 0 0 1rem 0;
+	letter-spacing: 0.2rem;
+	font-family: "Parkinsans", serif;
+}
+
 h2,
-h3,
 h4,
 h5,
 h6 {
