@@ -816,6 +816,7 @@ h6.major {
 	width: max-content;
 	padding-bottom: 0.5rem;
 	margin: 25px 0 2rem 0;
+	text-transform: uppercase;
 }
 
 h1 {
