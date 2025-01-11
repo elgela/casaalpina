@@ -285,17 +285,16 @@ textarea {
 
 .content-all {
 	width: 100%;
-	display: flex;
+	height: 100%;
+	display: grid;
 }
 
 .content-img {
-	/* background-color: tomato; */
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	left: 0px;
 	transform: translateX(-100%);
-	/*rotateY(360deg) para que gire imagen al cambiar*/
 	opacity: 0;
 	transition: all 2s;
 }
@@ -312,8 +311,8 @@ textarea {
 
 .content-img img {
 	display: flex;
-	margin: 0 15%;
-	width: 70%;
+	margin: 0 25%;
+	width: 50%;
 	height: 100%;
 }
 
@@ -323,19 +322,71 @@ textarea {
 	background-color: #2a2828;
 }
 
-.bx-chevron-right {
-	position: absolute;
-	top: 40%;
-	right: 0;
-	font-size: 55px;
-}
-
 .bx-chevron-left {
 	position: absolute;
-	top: 40%;
-	left: 0;
+	top: 45%;
+	left: 25%;
 	font-size: 55px;
+	opacity: 0;
+	transition: opacity .4s;
+	color: #000000;
+	background-color: #ffffff54;
+	border-radius: 40%;
 }
+
+.hover-area-left {
+	display: grid;
+	top: 0;
+	bottom: 0;
+	left: 10px;
+	width: 30%;
+	height: 100%;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1;
+}
+
+.hover-area-left:hover .bx-chevron-left {
+	opacity: 1;
+}
+
+.bx-chevron-right {
+	position: absolute;
+	top: 45%;
+	right: 25%;
+	font-size: 55px;
+	opacity: 0;
+	transition: opacity .4s;
+	color: #000000;
+	background-color: #ffffff54;
+	border-radius: 40%;
+}
+
+.hover-area-right {
+	display: grid;
+	top: 0;
+	bottom: 0;
+	right: 10px;
+	width: 30%;
+	height: 100%;
+	cursor: pointer;
+	position: absolute;
+	z-index: 1;
+}
+
+.hover-area-right:hover .bx-chevron-right {
+	opacity: 1;
+}
+
+
+/* .bx-chevron-right:hover {
+	opacity: 1;
+} */
+
+
+/* .bx-chevron-left:hover {
+	opacity: 1;
+} */
 
 ul,
 li {
@@ -1382,7 +1433,8 @@ input[type="radio"]+label:before {
 
 }
 
-@media screen and (max-width: 600px) { /*hacer container en dos columnas en mas de 600px*/
+@media screen and (max-width: 600px) {
+	/*hacer container en dos columnas en mas de 600px*/
 
 	.image.main {
 		margin: 2.5rem 0;
@@ -1991,21 +2043,22 @@ body.is-preload #bg:before {
 
 #header .logo {
 	display: flex;
-	width: 28rem;
-	height: 28rem;
 	line-height: 5.5rem;
-	/* border: solid 1px #ffffff; */
-	/* border-radius: 100%; */
 	transition: all 8.0s ease;
 	transition-delay: 0.71s;
+	filter: brightness(90%);
 }
 
-#header .logo-mobile {
+.logo img {
+	width: 33rem;
+	height: 23rem;
+}
+
+/* #header .logo-mobile {
 	width: 100%;
 	height: 100%;
 	filter: brightness(90%);
-	/* border-radius: 70%; */
-}
+} */
 
 #header .logo .icon:before {
 	font-size: 2rem;
@@ -2193,9 +2246,9 @@ body.is-preload #header .content .inner {
 		height: calc(2rem + 1px);
 	}
 
-	#header .logo {
-		width: 25rem;
-		height: 25rem;
+	.logo img {
+		width: 30rem;
+		height: 20rem;
 		/* line-height: 4.75rem; */
 	}
 
@@ -2229,9 +2282,8 @@ body.is-preload #header .content .inner {
 	.content-img img {
 		margin: 0;
 		width: 100%;
-		height: 80%;
+		height: 100%;
 	}
-
 
 	.del_pinar,
 	.del_solar,
@@ -2242,6 +2294,20 @@ body.is-preload #header .content .inner {
 
 	.detalles ul li {
 		font-size: small;
+	}
+
+	.bx-chevron-right {
+		opacity: 1;
+		color: #ffffff;
+		background-color: transparent;
+		right: 2%;
+	}
+
+	.bx-chevron-left {
+		opacity: 1;
+		color: #ffffff;
+		background-color: transparent;
+		left: 2%;
 	}
 
 }
@@ -2301,10 +2367,9 @@ body.is-preload #header .content .inner {
 		display: block;
 	}
 
-	#header .logo {
-		margin-bottom: 20px;
-		width: 23rem;
-		height: 23rem;
+	.logo img {
+		width: 25rem;
+		height: 15rem;
 	}
 
 	.ir-arriba {
@@ -2427,7 +2492,7 @@ body.is-preload #header .content .inner {
 		text-align: center;
 		font-size: x-large;
 	}
-	
+
 	#des2 {
 		opacity: 0;
 	}
@@ -2467,10 +2532,6 @@ body.is-preload #header .content .inner {
 }
 
 @media screen and (max-width: 493px) {
-	/* .drop {
-		top: 51.2rem;
-	} */
-
 	#header .content .inner h1 {
 		font-size: 2.5rem;
 	}
@@ -2479,6 +2540,12 @@ body.is-preload #header .content .inner {
 	.bx-mail-send {
 		font-size: 200%;
 	}
+
+	.logo img {
+		width: 18rem;
+		height: 12rem;
+	}
+
 
 }
 
@@ -2523,10 +2590,9 @@ body.is-preload #header .content .inner {
 		top: 43rem;
 	} */
 
-	#header .logo {
-		margin-bottom: 20px;
-		width: 15rem;
-		height: 15rem;
+	.logo img {
+		width: 18rem;
+		height: 12rem;
 	}
 
 	h1 {
@@ -2534,9 +2600,13 @@ body.is-preload #header .content .inner {
 		line-height: 1.4;
 	}
 
-	.content-img {
-		height: 70%;
+	.content-all {
+		height: 90%;
 	}
+
+	/* .content-img img {
+		height: 100%;
+	} */
 
 	#footer {
 		display: block;
@@ -2610,6 +2680,7 @@ body.is-preload #header .content .inner {
 }
 
 @media screen and (max-width: 366px) {
+
 	#go-back,
 	.btn-reserva,
 	.btn-fotos {
