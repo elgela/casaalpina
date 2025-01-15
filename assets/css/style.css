@@ -652,54 +652,6 @@ html {
 	font-size: 16pt;
 }
 
-
-
-@media screen and (max-width: 360px) {
-
-	html {
-		font-size: 10pt;
-	}
-
-	p#menu {
-		margin-left: -2px;
-	}
-
-	#footer .developer .link:hover {
-		color: #ffffff;
-	}
-
-	.icons .bxl-youtube:hover {
-		background-color: rgba(255, 255, 255, 0.075);
-	}
-
-	.icons .bxl-tiktok:hover {
-		background-color: rgba(255, 255, 255, 0.075);
-	}
-
-	.icons .fa-instagram:hover {
-		background-color: rgba(255, 255, 255, 0.075);
-	}
-
-	.icons .fa-facebook-f:hover {
-		background-color: rgba(255, 255, 255, 0.075);
-	}
-
-	h1 {
-		font-size: 1.8rem;
-	}
-
-	#go-back,
-	.btn-reserva,
-	.btn-fotos {
-		zoom: 70%;
-	}
-
-	#main article p {
-		font-size: small;
-	}
-
-}
-
 body,
 input,
 select,
@@ -1607,6 +1559,13 @@ button {
 	line-height: calc(2.75rem - 2px);
 }
 
+#go-back,
+.btn-reserva,
+.btn-fotos {
+	zoom: 80%;
+}
+
+
 /* BG */
 
 #bg {
@@ -1994,7 +1953,7 @@ body.is-preload #header .content .inner {
 
 }
 
-@media screen and (max-width: 980px) {
+/* @media screen and (max-width: 980px) {
 
 	#header .content p br {
 		display: none;
@@ -2007,7 +1966,7 @@ body.is-preload #header .content .inner {
 		height: 100%;
 	}
 
-}
+} */
 
 @media screen and (max-width: 736px) {
 
@@ -2228,6 +2187,12 @@ body.is-preload #header .content .inner {
 		height: 100%;
 	}
 
+	/* #go-back,
+		.btn-reserva,
+		.btn-fotos {
+			zoom: 70%;
+		} */
+
 	.nav-list {
 		display: grid;
 	}
@@ -2235,6 +2200,10 @@ body.is-preload #header .content .inner {
 	.navmenu label {
 		display: block;
 		width: auto;
+	}
+
+	.titulo h1 {
+		font-size: 2.7rem;
 	}
 
 	.icons .bxl-youtube:hover {
@@ -2356,7 +2325,7 @@ body.is-preload #header .content .inner {
 
 }
 
-@media screen and (max-width: 532px) {
+/* @media screen and (max-width: 532px) {
 
 	#go-back,
 	.btn-reserva,
@@ -2372,7 +2341,7 @@ body.is-preload #header .content .inner {
 		margin-top: -3.2rem;
 	}
 
-}
+} */
 
 @media screen and (max-width: 493px) {
 	#header .content .inner h1 {
@@ -2410,11 +2379,11 @@ body.is-preload #header .content .inner {
 		font-size: medium;
 	}
 
-	#go-back,
+	/* #go-back,
 	.btn-reserva,
 	.btn-fotos {
 		zoom: 80%;
-	}
+	} */
 
 	.titulo h1 {
 		font-size: 2.5rem;
@@ -2567,7 +2536,7 @@ body.is-preload #header .content .inner {
 
 }
 
-@media screen and (max-width: 430px) {
+/* @media screen and (max-width: 430px) {
 
 	#go-back,
 	.btn-reserva,
@@ -2575,9 +2544,9 @@ body.is-preload #header .content .inner {
 		zoom: 77%;
 	}
 
-}
+} */
 
-@media screen and (max-width: 415px) {
+/* @media screen and (max-width: 415px) {
 
 	#go-back,
 	.btn-reserva,
@@ -2585,7 +2554,7 @@ body.is-preload #header .content .inner {
 		zoom: 72%;
 	}
 
-}
+} */
 
 @media screen and (max-width: 411px) {
 
@@ -2635,6 +2604,51 @@ body.is-preload #header .content .inner {
 	}
 }
 
+@media screen and (max-width: 360px) {
+
+	html {
+		font-size: 10pt;
+	}
+
+	p#menu {
+		margin-left: -2px;
+	}
+
+	#footer .developer .link:hover {
+		color: #ffffff;
+	}
+
+	.icons .bxl-youtube:hover {
+		background-color: rgba(255, 255, 255, 0.075);
+	}
+
+	.icons .bxl-tiktok:hover {
+		background-color: rgba(255, 255, 255, 0.075);
+	}
+
+	.icons .fa-instagram:hover {
+		background-color: rgba(255, 255, 255, 0.075);
+	}
+
+	.icons .fa-facebook-f:hover {
+		background-color: rgba(255, 255, 255, 0.075);
+	}
+
+	h1 {
+		font-size: 1.8rem;
+	}
+
+	#go-back,
+	.btn-reserva,
+	.btn-fotos {
+		zoom: 70%;
+	}
+
+	#main article p {
+		font-size: small;
+	}
+
+}
 
 /* Main */
 
