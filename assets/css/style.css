@@ -144,6 +144,15 @@ section {
 	display: block;
 }
 
+.logoTR {
+	display: inline-block;
+	height: 30px;
+	top: -13px;
+	left: 70px;
+	position: relative;
+	border-radius: 50%;
+}
+
 body {
 	line-height: 1;
 }
@@ -593,13 +602,16 @@ p#interior {
 	font-size: 0.8rem;
 	opacity: 0.75;
 	margin-bottom: 0;
-	margin-top: 4px;
+	margin-top: 20px;
 	font-style: oblique;
+	height: 20px;
 }
 
 #footer .developer .link {
 	/* color: rgba(89, 255, 0, 0.585); */
 	font-weight: 900;
+	font-size: medium;
+	margin-left: -30px;
 }
 
 #footer .developer .link:hover {
