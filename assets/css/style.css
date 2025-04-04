@@ -1788,8 +1788,8 @@ body.is-preload #bg:before {
 	transition-delay: 0.55s;
 	padding: 3rem 2rem;
 	/*mas separado y tarda mas en abrir*/
-	max-height: 40rem;
-	overflow: hidden;
+	/* max-height: 40rem;
+	overflow: hidden; */
 }
 
 #header .content .inner h1 {
