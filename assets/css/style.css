@@ -13,6 +13,39 @@
 	/*para quitar fondo azul click links*/
 }
 
+#popup {
+	display: none;
+	position: fixed;
+	top: 20px;
+	left: 20%;
+	transform: translateX(-50%);
+	background-color: #f8d7da;
+	color: #721c24;
+	padding: 100px;
+	border: 1px solid #f5c6cb;
+	border-radius: 5px;
+}
+
+#popup p {
+	color: #000000;
+	font-size: 40px;
+}
+
+.aviso_promo {
+	background-color: #f9f8f8;
+	height: 400px;
+}
+
+.aviso_promo h4 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	color: #000000;
+	font-size: xx-large;
+	margin: 50px;
+}
+
 .ir-arriba p {
 	font-family: sans-serif;
 	position: absolute;
@@ -148,7 +181,7 @@ section {
 	display: inline-block;
 	height: 30px;
 	top: -13px;
-	left: 70px;
+	left: 25px;
 	position: relative;
 	border-radius: 50%;
 }
@@ -566,9 +599,11 @@ p#interior {
 
 .redes {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	width: 100%;
 	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .bxl-whatsapp {
@@ -586,6 +621,30 @@ p#interior {
 	margin-left: 5px;
 }
 
+.buttonReserva {
+	display: block; /* Para que respete dimensiones como un botón */
+	padding: 10px 10px; /* Espaciado interno */
+	background-color: #ffffff;
+	color: #000000;
+	/* text-decoration: none; */
+	/* border: none; */
+	border-radius: 5px;
+	font-size: 16px;
+	/* cursor: pointer; */
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: smaller;
+	width: 9rem;
+	margin: auto;
+}
+
+.buttonReserva:hover {
+	display: block;
+	background-color: #1b1f22;
+	color: #ffffff;
+}
+
 .bxl-whatsapp:hover,
 .bx-mail-send:hover {
 	transform: scale(1.2);
@@ -594,17 +653,22 @@ p#interior {
 .whatsapp p,
 .mail p {
 	margin-left: 10px;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+	font-family: cursive;
 }
 
 #footer .developer {
+	display: inline-block;
+	border-radius: 20%;
 	letter-spacing: 0.2rem;
 	font-size: 0.8rem;
 	opacity: 0.75;
 	margin-bottom: 0;
-	margin-top: 20px;
+	margin-top: 30px;
 	font-style: oblique;
-	height: 20px;
+	height: 40px;
+	background-color: #cdd9cf4a;
+	border-top: 1px solid white;
 }
 
 #footer .developer .link {
@@ -615,8 +679,12 @@ p#interior {
 }
 
 #footer .developer .link:hover {
-	color: red;
+	color: rgb(216, 49, 49);
 	filter: brightness(2.5);
+}
+
+.developer label {
+	display: none;
 }
 
 .first_p {
@@ -1753,9 +1821,10 @@ body.is-preload #bg:before {
 	filter: brightness(90%);
 }
 
-.logo img {
-	width: 33rem;
-	height: 23rem;
+.logo-mobile {
+	width: 100%;
+	max-width: 300px;
+	height: auto;
 }
 
 #header .logo .icon:before {
@@ -2038,12 +2107,12 @@ body.is-preload #header .content .inner {
 		height: calc(2rem + 1px);
 	}
 
-	.logo img {
-		width: 30rem;
-		height: 20rem;
-		/* line-height: 4.75rem; */
+	.logo-mobile {
+		/* width: 100%; */
+		max-width: 250px;
+		/* height: auto; */
 	}
-
+	
 	#header .logo .icon:before {
 		font-size: 1.75rem;
 	}
@@ -2173,11 +2242,11 @@ body.is-preload #header .content .inner {
 		display: block;
 	}
 
-	.logo img {
-		width: 25rem;
-		height: 15rem;
+	.logo-mobile {
+		max-width: 230px;
+		padding-bottom: 5px;
 	}
-
+	
 	.ir-arriba {
 		font-size: 40px;
 		cursor: pointer;
@@ -2275,6 +2344,7 @@ body.is-preload #header .content .inner {
 
 	.nav-bar {
 		display: grid;
+
 	}
 
 	.div-buttons {
@@ -2365,11 +2435,19 @@ body.is-preload #header .content .inner {
 		font-size: 200%;
 	}
 
-	.logo img {
-		width: 18rem;
-		height: 12rem;
+	.buttonReserva {
+		padding: 4px 4px;
+		font-size: 80%;
+		width: 5rem;
+		font-size: x-small;
+		font-weight: 700;
 	}
 
+	.logo-mobile {
+		max-width: 210px;
+		padding-bottom: 10px;
+	}
+	
 }
 
 @media screen and (max-width: 480px) {
@@ -2403,6 +2481,7 @@ body.is-preload #header .content .inner {
 
 	.whatsapp p,
 	.mail p {
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 		font-size: x-small;
 	}
 
@@ -2436,6 +2515,10 @@ body.is-preload #header .content .inner {
 		color: #ffffff;
 	}
 
+	.developer label {
+		display: block;
+	}	
+	
 	.icons .bxl-youtube:hover {
 		background-color: rgba(255, 255, 255, 0.075);
 	}
@@ -2522,10 +2605,10 @@ body.is-preload #header .content .inner {
 
 @media screen and (max-width: 439px) {
 
-	.logo img {
+	/* .logo img {
 		width: 18rem;
 		height: 12rem;
-	}
+	} */
 
 	h1 {
 		font-size: 2.1rem;
@@ -2660,6 +2743,11 @@ body.is-preload #header .content .inner {
 		font-size: small;
 	}
 
+	.logo-mobile {
+		max-width: 190px;
+		padding-bottom: 15px;
+	}
+	
 }
 
 /* Main */

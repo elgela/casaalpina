@@ -5,14 +5,14 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta name="description" content="Complejo de cabañas en Tandil. Tómate un descanso y disfruta de la tranquilidad.">
+	<meta name="description" content="Complejo de cabañas en Tandil. Tomate un descanso y disfruta de la tranquilidad.">
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="shortcut icon" href="./images/Logos/favicon/android-icon-144x144.png" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> -->
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@600&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@600&display=swap" rel="stylesheet"> -->
 	<!--favicon-->
 	<link rel="apple-touch-icon" sizes="57x57" href="./images/Logos/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="./images/Logos/favicon/apple-icon-60x60.png">
@@ -35,17 +35,41 @@
 		<link rel="stylesheet" href="./assets/css/noscript.css" />
 	</script>
 	<title>casaalpina - Inicio</title>
+
+	<!-- Meta Pixel Code -->
+	<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '788395913348849');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=788395913348849&ev=PageView&noscript=1" /></noscript>
+	<!-- End Meta Pixel Code -->
 </head>
 
 <body class="is-preload clear-mode">
-
+	
 	<!-- Wrapper -->
 	<div id="wrapper">
+		<div id="popup">
+			<p>¡Reservá! No seas ratón!</p>
+		</div>
 
 		<!-- Header -->
 		<header id="header">
 			<div class="logo">
-				<img src="./images/Logos/solo_logo-removebg.webp" class="logo-mobile" alt="Logo Casa Alpina" loading="lazy">
+				<img src="./images/Logos/logo_casaalpina-nobg.webp" class="logo-mobile" alt="Logo Casa Alpina"
+					loading="lazy">
 			</div>
 			<div class="content">
 				<div class="inner">
@@ -74,9 +98,10 @@
 					</label>
 					<div class="nav-list">
 						<ul class="drop">
-							<li><a href="#predio">Predio</a></li>
 							<li><a href="#cabanias">Cabañas</a></li>
+							<li><a href="#predio">Predio</a></li>
 							<li><a href="#servicios">Servicios</a></li>
+							<li><a href="#promocion">Promociones</a></li>
 							<li><a href="#ubicacion">Ubicación</a></li>
 						</ul>
 					</div>
@@ -175,6 +200,69 @@
 				</span>
 			</article>
 
+			<!-- Predio -->
+			<article id="predio">
+				<h2 class="major">Predio</h2>
+				<p>
+					Nuestro predio, ubicado en las laderas del Cerro El Centinela, posee media hectárea de
+					parques y
+					jardines...
+					Con frondosa y añeja arboleda, con más de 20 años. Hermosos pinos, acacias, aromos y
+					araucarias.
+					Todo su perímetro cercado con diversos ligustros, cotoneaster y grateau, que le dan gran
+					colorido y
+					privacidad.</p>
+				<p>Numerosa cantidad de rosales y arbustos florales. La vegetación de jardinería ,
+					acompaña
+					armoniosamente la individualidad de cada cabaña.
+					Verde y corto césped en toda la extensión, con caminos interiores de pedregullo granítico,
+					perfectamente delimitados.</p>
+				<p>El predio se encuentra iluminado, desde el portón de ingreso, hasta los caminos y jardines.
+				</p>
+				<h3 class="major">Exteriores</h3>
+				<div class="image main">
+					<a href="exterior.html"><img src="./images/Exterior/IMG_0247.webp" loading="lazy"
+							alt="rotonda y jardin" style="cursor: pointer;"></a>
+					<label class="up600">click en imagen para ver mas fotos</label>
+					<label class="down600">toque imagen para ver mas fotos</label>
+				</div>
+				<!-- <a href="exterior.html"><button id="fotos-exterior">Fotos</button></a> -->
+
+				<span class="image main">
+					<div id="videos">
+						<video src="./Videos/predio/cabaniasAtras(REDUCED).mp4" loading="lazy" loop autoplay
+							muted></video>
+						<video src="./Videos/predio/recorrido(REDUCED).mp4" loading="lazy" loop autoplay muted></video>
+						<video src="./Videos/predio/por_camino(REDUCED).mp4" loading="lazy" loop autoplay muted></video>
+					</div>
+				</span>
+				<!--Pileta-->
+				<h3 class="major">Pileta</h3>
+				<!-- <a href="pileta.html"><button id="fotos-pileta" alt="pileta">Fotos</button></a> -->
+				<div class="image main">
+					<a href="pileta.html"><img src="./images/Pileta/IMG_1498.webp" loading="lazy" alt="pileta"
+							style="cursor: pointer;" /></a>
+					<label class="up600">click en imagen para ver mas fotos</label>
+					<label class="down600">toque imagen para ver mas fotos</label>
+				</div>
+				<p>
+					Un conjunto desarrollado para el descanso y la recreación.
+					Una piscina de 8 x 4 mts y 1,40 mts. de profundidad, de 45.000 lts de cristalina agua.
+					Un Solarium circundante, con mesas, sombrillas, sillas, reposeras y sillones para el
+					descanso y
+					para
+					disfrutar de un día soleado...
+					La piscina se habilita y está disponible entre el 1 de Diciembre y el 20 de Marzo.
+				</p>
+				<span class="ir-arriba">
+					<i class='bx bxs-chevron-up-circle'></i>
+					<p>Ir arriba</p>
+				</span>
+
+			</article>
+
+
+
 			<!-- Servicios -->
 			<article id="servicios">
 				<h2 class="major">Servicios</h2>
@@ -207,82 +295,31 @@
 						<div class="servicios-desayuno-allimg">
 							<div class="servicios-desayuno-img" id="des1">
 								<a href="desayuno.html"><img src="./images/Desayunos/IMG_0414.webp" loading="lazy"
-									alt="bandeja de desayuno con pileta al fondo"></a>
-									<label class="down600">toque imagen para ver mas fotos</label>
-								</div>
-								<div class="servicios-desayuno-img" id="des2">
-									<a href="desayuno.html"><img src="./images/Desayunos/IMG_0835.webp" loading="lazy"
+										alt="bandeja de desayuno con pileta al fondo"></a>
+								<label class="down600">toque imagen para ver mas fotos</label>
+							</div>
+							<div class="servicios-desayuno-img" id="des2">
+								<a href="desayuno.html"><img src="./images/Desayunos/IMG_0835.webp" loading="lazy"
 										alt="bandeja de desayuno con rotonda al fondo"></a>
-									</div>
-								</div>
+							</div>
+						</div>
 						<h3 class="major">Elaboración</h3>
 						<div class="videos-desayuno">
 							<video src="./Videos/desayCrema1(REDUCED).mp4" loop autoplay muted loading="lazy"></video>
-							<video src="./Videos/desayCremaScon(REDUCED).mp4" loop autoplay muted loading="lazy"></video>
+							<video src="./Videos/desayCremaScon(REDUCED).mp4" loop autoplay muted
+								loading="lazy"></video>
 							<video src="./Videos/desayCrema2(REDUCED).mp4" loop autoplay muted loading="lazy"></video>
 						</div>
 					</div>
 				</div>
 			</article>
 
-			<!-- Predio -->
-			<article id="predio">
-				<h2 class="major">Predio</h2>
-				<p>
-					Nuestro predio, ubicado en las laderas del Cerro El Centinela, posee media hectárea de
-					parques y
-					jardines...
-					Con frondosa y añeja arboleda, con más de 20 años. Hermosos pinos, acacias, aromos y
-					araucarias.
-					Todo su perímetro cercado con diversos ligustros, cotoneaster y grateau, que le dan gran
-					colorido y
-					privacidad.</p>
-				<p>Numerosa cantidad de rosales y arbustos florales. La vegetación de jardinería ,
-					acompaña
-					armoniosamente la individualidad de cada cabaña.
-					Verde y corto césped en toda la extensión, con caminos interiores de pedregullo granítico,
-					perfectamente delimitados.</p>
-				<p>El predio se encuentra iluminado, desde el portón de ingreso, hasta los caminos y jardines.
-				</p>
-				<h3 class="major">Exteriores</h3>
-				<div class="image main">
-					<a href="exterior.html"><img src="./images/Exterior/IMG_0247.webp" loading="lazy"
-						alt="rotonda y jardin" style="cursor: pointer;"></a>
-						<label class="up600">click en imagen para ver mas fotos</label>
-						<label class="down600">toque imagen para ver mas fotos</label>
-				</div>
-				<!-- <a href="exterior.html"><button id="fotos-exterior">Fotos</button></a> -->
 
-				<span class="image main">
-					<div id="videos">
-						<video src="./Videos/predio/cabaniasAtras(REDUCED).mp4" loading="lazy" loop autoplay muted></video>
-						<video src="./Videos/predio/recorrido(REDUCED).mp4" loading="lazy" loop autoplay muted></video>
-						<video src="./Videos/predio/por_camino(REDUCED).mp4" loading="lazy" loop autoplay muted></video>
-					</div>
-				</span>
-				<!--Pileta-->
-				<h3 class="major">Pileta</h3>
-				<!-- <a href="pileta.html"><button id="fotos-pileta" alt="pileta">Fotos</button></a> -->
-				<div class="image main">
-					<a href="pileta.html"><img src="./images/Pileta/IMG_1498.webp" loading="lazy" alt="pileta"
-						style="cursor: pointer;" /></a>
-						<label class="up600">click en imagen para ver mas fotos</label>
-						<label class="down600">toque imagen para ver mas fotos</label>
+			<!--Promociones-->
+			<article id="promocion">
+				<div class="aviso_promo">
+					<h4>Próximamente encontrará acá nuestras promos...</h4>
 				</div>
-				<p>
-					Un conjunto desarrollado para el descanso y la recreación.
-					Una piscina de 8 x 4 mts y 1,40 mts. de profundidad, de 45.000 lts de cristalina agua.
-					Un Solarium circundante, con mesas, sombrillas, sillas, reposeras y sillones para el
-					descanso y
-					para
-					disfrutar de un día soleado...
-					La piscina se habilita y está disponible entre el 1 de Diciembre y el 20 de Marzo.
-				</p>
-				<span class="ir-arriba">
-					<i class='bx bxs-chevron-up-circle'></i>
-					<p>Ir arriba</p>
-				</span>
-
 			</article>
 
 			<!--Ubicación-->
@@ -300,14 +337,15 @@
 					width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</article>
-		</article>
-	</div>
-	<footer id="footerContacto">
-		<p class="copyright">Casa Alpina</p>
-		<p class="copyright">WhatsApp: 2494549919</p>
-		<p class="copyright">Email: contacto@casaalpina.com.ar</p>
-		<p class="copyright">Icalma 2904 - Paraje El Centinela, Tandil - Buenos Aires - Argentina</p>
-	</footer>
+
+			</article>
+		</div>
+		<footer id="footerContacto">
+			<p class="copyright">Casa Alpina</p>
+			<p class="copyright">WhatsApp: 2494549919</p>
+			<p class="copyright">Email: contacto@casaalpina.com.ar</p>
+			<p class="copyright">Icalma 2904 - Paraje El Centinela, Tandil - Buenos Aires - Argentina</p>
+		</footer>
 
 		<!-- Footer -->
 		<ul class="icons">
@@ -327,6 +365,9 @@
 					<i class='bx bxl-whatsapp'></i>
 				</a>
 			</div>
+			<div class="buttonReserva">
+				<a href="https://booking.avirato.com/?code=49886329" target="_blank">Reserva Online</a>
+			</div>
 			<div class="mail">
 				<p>E-Mail</p>
 				<a href="mailto:contacto@casaalpina.com.ar">
@@ -340,7 +381,9 @@
 			<p class="copyright">WhatsApp: 2494549919</p>
 			<p class="copyright">Email: contacto@casaalpina.com.ar</p>
 			<p class="copyright">Icalma 2904 - Paraje El Centinela, Tandil - Buenos Aires - Argentina</p>
-			<p class="developer">Developed by <a href="https://turesponsive.com.ar/" target="_blank" class="link"><img src="./images/Logos/logo_turesponsive.jpg" alt="logo de turesponsive" class="logoTR">&nbsp;turesponsive</a></p>
+			<p class="developer">Developed by<a href="https://turesponsive.com.ar/" target="_blank" class="link"><img
+						src="./images/Logos/logo_turesponsive.jpg" alt="logo de turesponsive"
+						class="logoTR">&nbsp;turesponsive</a><label>entrar</label></p>
 		</footer>
 	</div>
 
