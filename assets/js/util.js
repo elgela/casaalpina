@@ -618,7 +618,7 @@ function irArriba() {
 }
 
 /////////////////////popup///////////////////////////////
-window.onload = function () {
+// window.onload = function () {
 	document.addEventListener("mousemove", function (event) {
 		if (event.clientY < 1) { // Si el cursor está cerca de la parte superior
 			document.getElementById("popup").style.display = "block";
@@ -628,7 +628,7 @@ window.onload = function () {
 	document.getElementById("popup").addEventListener("click", function () {
 		this.style.display = "none"; // Oculta el popup cuando el usuario haga clic en él
 	});
-};
+// };
 
 ////////arrastre rapido del mouse hacia arriba///////////
 let lastY = window.innerHeight; // Posición inicial fuera del área superior
