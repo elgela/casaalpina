@@ -31,6 +31,10 @@
 	font-size: 40px;
 }
 
+#popup label {
+	color: #1b1f22;
+}
+
 .aviso_promo {
 	background-color: #f9f8f8;
 	height: 400px;
