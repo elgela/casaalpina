@@ -40,13 +40,13 @@
 	height: auto;
 }
 
-.tres_cuotas img {
+.conoce_tandil img {
 	display: flex;
 	width: 100%;
 	height: 80%;
 }
 
-.tres_cuotas label {
+.conoce_tandil label {
 	/* background-color: #f9f8f8; */
 	padding: 1%;
 	border-radius: 20px;
@@ -54,7 +54,7 @@
 	font-weight: 500;
 }
 
-.tres_cuotas label span {
+.conoce_tandil label span {
 	display: block;
 	font-weight: bold;
 	font-size: large;
