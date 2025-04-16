@@ -13,7 +13,7 @@
 	/*para quitar fondo azul click links*/
 }
 
-/* #popup {
+#popup {
 	display: none;
 	position: fixed;
 	top: 20px;
@@ -33,7 +33,7 @@
 
 #popup label {
 	color: #1b1f22;
-} */
+}
 
 .aviso_promo {
 	background-color: #f9f8f8;
