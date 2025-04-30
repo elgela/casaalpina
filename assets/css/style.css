@@ -1971,6 +1971,14 @@ body.is-preload #bg:before {
 	border-left: 0;
 }
 
+.qr {
+	display: flex;
+	transform: scale(0.3);
+	filter: brightness(85%);
+	border: none;
+	margin: -120px;
+}
+
 body.is-article-visible #header {
 	-moz-transform: scale(0.95);
 	-webkit-transform: scale(0.95);
@@ -2254,6 +2262,10 @@ body.is-preload #header .content .inner {
 
 	#header input:checked~div ul {
 		display: block;
+	}
+
+	.qr {
+		transform: scale(0.2);
 	}
 
 	.logo-mobile {
@@ -2609,6 +2621,10 @@ body.is-preload #header .content .inner {
 	ul.actions:not(.fixed) li button.icon:before,
 	ul.actions:not(.fixed) li .button.icon:before {
 		margin-left: -0.5em;
+	}
+
+	.qr {
+		transform: scale(0.15);
 	}
 
 }
