@@ -71,14 +71,14 @@
 .ir-arriba {
 	/* display: none; */
 	background-repeat: no-repeat;
-	font-size: 40px;
+	font-size: 50px;
 	color: rgb(247, 245, 245);
 	cursor: pointer;
-	position: fixed;
+	/* position: fixed; */
 	bottom: -10px;
-	left: 20px;
+	left: 10px;
 	z-index: 2;
-	position: static;
+	position: sticky;
 }
 
 .bxs-chevron-up-circle {
