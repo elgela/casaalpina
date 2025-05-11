@@ -1,3 +1,10 @@
+Archivos modificados
 -index.html
 -style.css
-/* 30 minutos */
+
+
+Tiempo trabajo
+
+10/05
+inicio: 22:00
+fin: 22:42
