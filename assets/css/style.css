@@ -2807,11 +2807,11 @@ body.is-preload #header .content .inner {
 	opacity: 1;
 }
 
-#desayuno,
-#mucama,
-#pet,
-#seguridad,
-#wifi {
+#desayuno-img,
+#mucama-img,
+#mascotas-img,
+#seguridad-img,
+#wifi-img {
 	width: 90%;
 	height: 50%;
 }
