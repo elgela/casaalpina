@@ -2827,6 +2827,7 @@ body.is-preload #header .content .inner {
 	border-radius: 10%;
 	width: 20px;
 	height: 100px;
+	cursor: pointer;
 }
 
 .services div {
