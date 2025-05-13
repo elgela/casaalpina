@@ -2903,7 +2903,8 @@ body.is-preload #header .content .inner {
 	width: 100%; /* cada imágen ocupa toda su columna */
 	height: auto;
 	object-fit: cover; /* Ajusta la imagen sin distorsión */
-	border-radius: 10px;
+	border-radius: 20px;
+	padding: 10px;
 }
 
 article label {
