@@ -2880,6 +2880,32 @@ body.is-preload #header .content .inner {
 	margin-top: 0;
 }
 
+#desayuno .imagenes,
+#check .imagenes,
+#mucama .imagenes,
+#mascotas .imagenes,
+#seguridad .imagenes,
+#internet .imagenes {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+#desayuno .imagenes img,
+#check .imagenes img,
+#mucama .imagenes img,
+#mascotas .imagenes img,
+#seguridad .imagenes img,
+#internet .imagenes img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
 article label {
 	text-align: center;
 }
