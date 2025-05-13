@@ -2811,7 +2811,8 @@ body.is-preload #header .content .inner {
 #mucama-img,
 #mascotas-img,
 #seguridad-img,
-#wifi-img {
+#wifi-img,
+#practicuna-img {
 	width: 90%;
 	height: 50%;
 }
