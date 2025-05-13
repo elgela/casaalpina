@@ -2888,7 +2888,7 @@ body.is-preload #header .content .inner {
 #internet .imagenes {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 10px;
+	gap: 10px; /* espacio entre imágenes */
 	width: 100%;
 	height: auto;
 	overflow: hidden;
@@ -2900,9 +2900,9 @@ body.is-preload #header .content .inner {
 #mascotas .imagenes img,
 #seguridad .imagenes img,
 #internet .imagenes img {
-	width: 100%;
+	width: 100%; /* cada imágen ocupa toda su columna */
 	height: auto;
-	object-fit: cover;
+	object-fit: cover; /* Ajusta la imagen sin distorsión */
 	border-radius: 10px;
 }
 
