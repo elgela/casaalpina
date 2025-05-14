@@ -636,8 +636,10 @@ p#interior {
 }
 
 .buttonReserva {
-	display: block; /* Para que respete dimensiones como un botón */
-	padding: 10px 10px; /* Espaciado interno */
+	display: block;
+	/* Para que respete dimensiones como un botón */
+	padding: 10px 10px;
+	/* Espaciado interno */
 	background-color: #ffffff;
 	color: #000000;
 	/* text-decoration: none; */
@@ -2132,7 +2134,7 @@ body.is-preload #header .content .inner {
 		max-width: 250px;
 		/* height: auto; */
 	}
-	
+
 	#header .logo .icon:before {
 		font-size: 1.75rem;
 	}
@@ -2206,6 +2208,30 @@ body.is-preload #header .content .inner {
 		font-size: medium;
 	}
 
+	#info-servicios #desayuno,
+	#info-servicios #check,
+	#info-servicios #mucama,
+	#info-servicios #mascotas,
+	#info-servicios #seguridad,
+	#info-servicios #internet {
+		display: block;
+	}
+
+	#info-servicios #desayuno p,
+	#info-servicios #check p,
+	#info-servicios #mucama p,
+	#info-servicios #mascotas p,
+	#info-servicios #seguridad p,
+	#info-servicios #internet p {
+		text-align: center;
+	}
+
+	h3.major {
+		width: 100%;
+		text-align: center;
+	}
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -2270,7 +2296,7 @@ body.is-preload #header .content .inner {
 		max-width: 230px;
 		padding-bottom: 5px;
 	}
-	
+
 	.ir-arriba {
 		font-size: 40px;
 		cursor: pointer;
@@ -2434,7 +2460,7 @@ body.is-preload #header .content .inner {
 		font-weight: bold;
 		font-size: small;
 	}
-	
+
 
 }
 
@@ -2478,7 +2504,7 @@ body.is-preload #header .content .inner {
 		max-width: 210px;
 		padding-bottom: 10px;
 	}
-	
+
 }
 
 @media screen and (max-width: 480px) {
@@ -2548,8 +2574,8 @@ body.is-preload #header .content .inner {
 
 	.developer label {
 		display: block;
-	}	
-	
+	}
+
 	.icons .bxl-youtube:hover {
 		background-color: rgba(255, 255, 255, 0.075);
 	}
@@ -2754,7 +2780,7 @@ body.is-preload #header .content .inner {
 		max-width: 190px;
 		padding-bottom: 15px;
 	}
-	
+
 }
 
 /* Main */
@@ -2815,6 +2841,7 @@ body.is-preload #header .content .inner {
 #practicuna-img {
 	width: 90%;
 	height: 50%;
+	border-radius: 10%;
 }
 
 .services {
@@ -2824,62 +2851,65 @@ body.is-preload #header .content .inner {
 	margin-bottom: -20%;
 }
 
-.services img {
-	border-radius: 10%;
-	width: 20px;
-	height: 100px;
-	cursor: pointer;
-}
-
-.services div {
+.services {
 	text-align: center;
 }
 
-.servicios-desayuno h3 {
+/* .servicios-desayuno h3 {
 	margin-top: 20px;
-}
+} */
 
-.servicios-desayuno {
+/* .servicios-desayuno {
 	margin-top: 80px;
 	display: block;
 	width: 100%;
-}
+} */
 
-.servicios-desayuno-allimg {
+/* .servicios-desayuno-allimg {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	height: 23rem;
 	text-align: center;
-}
+} */
 
-.servicios-desayuno-allimg img {
+/* .servicios-desayuno-allimg img {
 	margin: 0;
 	width: 90%;
 	height: 17rem;
 	border-radius: 15px;
-	/* margin: 30px 0; */
-}
+	margin: 30px 0;
+} */
 
-.desayuno {
+/* .desayuno {
 	position: relative;
 	text-align: center;
 	margin-top: 40px;
-}
+} */
 
-.desayuno h3 {
+/* .desayuno h3 {
 	text-align: left;
-}
+} */
 
-.desayuno img {
+/* .desayuno img {
 	width: 45%;
 	height: 150px;
 	margin-bottom: 20px;
 	border-radius: 5px;
-}
+} */
 
 .videos-desayuno {
 	display: flex;
 	margin-top: 0;
+}
+
+#desayuno,
+#check,
+#mucama,
+#mascotas,
+#seguridad,
+#internet {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 #desayuno .imagenes,
@@ -2888,9 +2918,9 @@ body.is-preload #header .content .inner {
 #mascotas .imagenes,
 #seguridad .imagenes,
 #internet .imagenes {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 10px; /* espacio entre imágenes */
+	display: flex;
+	gap: 10px;
+	/* espacio entre imágenes */
 	width: 100%;
 	height: auto;
 	overflow: hidden;
@@ -2902,16 +2932,32 @@ body.is-preload #header .content .inner {
 #mascotas .imagenes img,
 #seguridad .imagenes img,
 #internet .imagenes img {
-	width: 100%; /* cada imágen ocupa toda su columna */
+	width: 100%;
+	/* cada imágen ocupa toda su columna */
 	height: auto;
-	object-fit: cover; /* Ajusta la imagen sin distorsión */
+	object-fit: cover;
+	/* Ajusta la imagen sin distorsión */
 	border-radius: 10px;
 	padding: 2px;
 	cursor: pointer;
-	max-width: 100%;
-	max-height: 100%;
+	/* max-width: 100%; */
+	/* max-height: 100%; */
 	object-fit: contain;
 }
+
+#info-servicios #desayuno p,
+#info-servicios #check p,
+#info-servicios #mucama p,
+#info-servicios #mascotas p,
+#info-servicios #seguridad p,
+#info-servicios #internet p {
+	display: flex;
+	justify-content: center;
+	/* centra horizontalmente*/
+	align-items: center;
+	/* centra verticalmente */
+}
+
 
 article label {
 	text-align: center;
