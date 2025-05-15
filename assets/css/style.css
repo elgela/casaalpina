@@ -2924,6 +2924,7 @@ body.is-preload #header .content .inner {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
+	padding: 25px;
 }
 
 #desayuno .imagenes img,
