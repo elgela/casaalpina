@@ -60,25 +60,24 @@
 	font-size: large;
 }
 
+
+.ir-arriba {
+	background-repeat: no-repeat;
+	font-size: 50px;
+	color: rgb(103, 208, 98);
+	cursor: pointer;
+	bottom: -10px;
+	left: 10px;
+	z-index: 2;
+	position: sticky;
+}
+
 .ir-arriba p {
 	font-family: sans-serif;
 	position: absolute;
 	display: flex;
 	font-size: medium;
 	margin-top: -20px;
-}
-
-.ir-arriba {
-	/* display: none; */
-	background-repeat: no-repeat;
-	font-size: 50px;
-	color: rgb(103, 208, 98);
-	cursor: pointer;
-	/* position: fixed; */
-	bottom: -10px;
-	left: 10px;
-	z-index: 2;
-	position: sticky;
 }
 
 .bxs-chevron-up-circle {
@@ -2152,7 +2151,7 @@ body.is-preload #header .content .inner {
 	}
 
 	.ir-arriba {
-		position: static;
+		/* position: sticky; */
 		font-size: 40px;
 		cursor: pointer;
 		bottom: -16px;
@@ -2300,7 +2299,7 @@ body.is-preload #header .content .inner {
 	.ir-arriba {
 		font-size: 40px;
 		cursor: pointer;
-		bottom: -20px;
+		bottom: 20px;
 	}
 
 	.respmenu {
