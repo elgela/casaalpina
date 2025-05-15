@@ -2918,8 +2918,7 @@ body.is-preload #header .content .inner {
 #seguridad .imagenes,
 #internet .imagenes {
 	display: flex;
-	gap: 10px;
-	/* espacio entre imágenes */
+	gap: 10px;   /* espacio entre imágenes */
 	width: 100%;
 	height: auto;
 	overflow: hidden;
@@ -2932,11 +2931,9 @@ body.is-preload #header .content .inner {
 #mascotas .imagenes img,
 #seguridad .imagenes img,
 #internet .imagenes img {
-	width: 100%;
-	/* cada imágen ocupa toda su columna */
+	width: 100%;   /* cada imágen ocupa toda su columna */
 	height: auto;
-	object-fit: cover;
-	/* Ajusta la imagen sin distorsión */
+	object-fit: cover;   /* Ajusta la imagen sin distorsión */
 	border-radius: 10px;
 	padding: 2px;
 	cursor: pointer;
