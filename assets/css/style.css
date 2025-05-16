@@ -3105,3 +3105,17 @@ body.is-article-visible .icons {
 body.is-preload .redes {
 	opacity: 0;
 }
+
+#reservaForm {
+	padding: 15px;
+}
+
+#reservaForm label {
+	margin: 5px 0;
+}
+
+#fechaIngreso,
+#fechaEgreso {
+	cursor: pointer;
+	color: #000000;
+}
