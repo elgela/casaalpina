@@ -544,10 +544,25 @@ p#interior {
 
 #btn-cabania {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 33% 33% 33%;
+	justify-content: center;
+	align-items: center;
 	/* text-align: end; */
 	margin-top: -15px;
 	margin-bottom: 8px;
+}
+
+#btn-cabania a {
+	display: block;
+	text-align: center;
+	font-size: calc(1.5vw);
+}
+
+#tour_cabania {
+	cursor: pointer;
+	width: 100%;
+	border-radius: 10px;
+	height: 100%;
 }
 
 .sink div {
