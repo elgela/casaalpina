@@ -544,8 +544,8 @@ p#interior {
 
 #btn-cabania {
 	display: grid;
-	grid-template-columns: 33% 33% 33%;
-	justify-content: center;
+	grid-template-columns: 33% 33%;
+	justify-content: space-around;
 	align-items: center;
 	/* text-align: end; */
 	margin-top: -15px;
