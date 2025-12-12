@@ -2275,11 +2275,6 @@ body.is-preload #header .content .inner {
 		flex-direction: column;
 	}
 
-	#chrisTree {
-		display: flex;
-		height: 80px;
-	}
-
 	#header nav ul li {
 		border-left: 0;
 		border-top: solid 1px #ffffff;
@@ -3147,4 +3142,9 @@ body.is-preload .redes {
 #fechaEgreso {
 	cursor: pointer;
 	color: #000000;
+}
+
+#chrisTree {
+	display: flex;
+	height: 80px;
 }
