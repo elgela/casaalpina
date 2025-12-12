@@ -284,6 +284,15 @@ textarea {
 	color: bisque;
 }
 
+#chrisTree_cab img {
+	position: relative;
+	left: 5px;
+	height: 35px;
+	width: 40px;
+	margin-top: auto;
+	top: .5rem;
+}
+
 .detalles {
 	position: relative;
 	display: grid;
