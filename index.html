@@ -556,6 +556,15 @@
 	<script src="./assets/js/util.js"></script>
 	<script src="./assets/js/main.js"></script>
 	<!-- <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script> -->
+	<script>
+		window.addEventListener("load", function() {
+			const loader = document.getElementById("preloader");
+			if (loader) {
+			loader.style.opacity = "0";
+			setTimeout(() => loader.style.display = "none", 500); // Fade-out suave
+			}
+		});
+	</script>
 
 </body>
 
