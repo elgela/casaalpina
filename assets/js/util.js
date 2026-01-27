@@ -647,3 +647,9 @@ document.addEventListener("mousemove", function(event) {
 document.getElementById("popup").addEventListener("click", function() {
     this.style.display = "none"; // Oculta el popup al hacer clic
 });
+
+window.addEventListener("load", function() {
+    const loader = document.getElementById("preloader");
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 500);
+  });
