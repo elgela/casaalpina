@@ -38,8 +38,10 @@
 /* Fondo negro cubriendo toda la pantalla */
 #preloader {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: #000;
   display: flex;
   justify-content: center;
