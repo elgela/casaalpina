@@ -50,59 +50,139 @@
 /* Animación de giro */
 .logo-spin {
   width: 120px;
-  animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 /* Contenedor centrado */
 .preloader-content {
-  text-align: center;
+	text-align: center;
 }
 
 /* Logo */
 .logo {
-  width: 150px;
-  margin-bottom: 20px;
+	width: 150px;
+	margin-bottom: 20px;
 }
 
 /* Spinner simple */
 .loader {
-	margin: auto;
-	border: 6px solid #f3f3f3;
-	border-top: 6px solid #ffffff;
-	border-radius: 50%;
-	width: 40px; height: 40px;
+  margin: auto;
+  border: 6px solid #a9e8fb;
+  border-top: 6px solid #57d5fb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* 👈 esto hace que gire */
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
+  0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-.aviso_promo {
-	/* background-color: #f9f8f8; */
-	height: auto;
+/*tarifas*/
+#temporada {
+	background-color: #fff;
+	margin-bottom: 20px;
+	border-radius: 4px;
 }
 
-.conoce_tandil img {
-	display: flex;
-	width: 100%;
-	height: 80%;
+#semanaSanta {
+	background-color: #fff;
+	margin-top: 20px;
+	border-radius: 4px;
 }
 
-.conoce_tandil label {
-	/* background-color: #f9f8f8; */
-	padding: 1%;
-	border-radius: 20px;
-	color: #f9f8f8;
-	font-weight: 500;
+.tarifas-temporada h1,
+.tarifas-semana_santa h1 {
+	text-align: center;
+	text-transform: uppercase;
+	color: #000;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 600;
 }
 
-.conoce_tandil label span {
-	display: block;
-	font-weight: bold;
+.tarifas h2 {
+	text-align: center;
+	color: #000;
+	text-transform: none;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-decoration: underline;
+	font-size: 35px;
+	letter-spacing: 1px;
+}
+
+.tarifas-temporada h3,
+.tarifas-semana_santa h3 {
+	text-align: center;
+	color: #000;
+	font-style: italic;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tarifas-temporada span,
+.tarifas-semana_santa span {
+	text-transform: none;
+}
+
+.tarifas .borde {
+	border: solid 1px rgb(28, 84, 141);
+	margin: 10px;
+}
+
+.tarifas p {
+	color: #000;
+	text-align: center;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-style: italic;
+}
+
+.tarifas label {
+	color: #000;
+	text-transform: none;
+	font-weight: 600;
+}
+
+.tarifas ul li {
+	color: #000;
+	list-style-type: disc;
+	margin-left: 30px;
 	font-size: large;
 }
 
+.precio-item {
+	color: #000;
+}
+
+.tarifa-noche {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: #333;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.tarifa-noche p {
+  margin: 0 0 6px;
+  font-weight: bold;
+}
+
+.precio-item {
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+.precio-item span {
+  color: #666;
+  margin-left: 6px;
+}
+
+.espacio {
+	height: 30px;
+}
 
 .ir-arriba {
 	background-repeat: no-repeat;
