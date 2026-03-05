@@ -52,7 +52,7 @@
 /* Animación de giro */
 .logo-spin {
   width: 120px;
-  animation: spin 1s linear infinite;
+  animation: spin 2s linear infinite; /* logo girando más lento */
 }
 
 /* Contenedor centrado */
@@ -74,7 +74,7 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  animation: spin 1s linear infinite; /* 👈 esto hace que gire */
+  animation: spin 2s linear infinite; /* 👈 esto hace que gire */
 }
 
 @keyframes spin {
@@ -83,20 +83,21 @@
 }
 
 /*tarifas*/
-#temporada {
+#temporada,
+#semanaSanta,
+#feriadoLargo,
+#viernesDomingo,
+#lunesJueves {
 	background-color: #fff;
 	margin-bottom: 20px;
 	border-radius: 4px;
 }
 
-#semanaSanta {
-	background-color: #fff;
-	margin-top: 20px;
-	border-radius: 4px;
-}
-
 .tarifas-temporada h1,
-.tarifas-semana_santa h1 {
+.tarifas-semana_santa h1,
+.tarifas-feriado_largo h1,
+.tarifas-viernes_domingo h1,
+.tarifas-lunes_jueves h1 {
 	text-align: center;
 	text-transform: uppercase;
 	color: #000;
@@ -115,7 +116,10 @@
 }
 
 .tarifas-temporada h3,
-.tarifas-semana_santa h3 {
+.tarifas-semana_santa h3,
+.tarifas-feriado_largo h3,
+.tarifas-viernes_domingo h3,
+.tarifas-lunes_jueves h3 {
 	text-align: center;
 	color: #000;
 	font-style: italic;
@@ -123,7 +127,10 @@
 }
 
 .tarifas-temporada span,
-.tarifas-semana_santa span {
+.tarifas-semana_santa span,
+.tarifas-feriado_largo span,
+.tarifas-viernes_domingo span,
+.tarifas-lunes_jueves span {
 	text-transform: none;
 }
 
@@ -823,7 +830,7 @@ p#interior {
 
 #footer .developer {
 	display: inline-block;
-	border-radius: 20%;
+	/* border-radius: 20%; */
 	letter-spacing: 0.2rem;
 	font-size: 0.8rem;
 	opacity: 0.75;
@@ -831,7 +838,7 @@ p#interior {
 	margin-top: 30px;
 	font-style: oblique;
 	height: 40px;
-	background-color: #cdd9cf4a;
+	/* background-color: #cdd9cf4a; */
 	border-top: 1px solid white;
 }
 
@@ -847,9 +854,9 @@ p#interior {
 	filter: brightness(2.5);
 }
 
-.developer label {
+/* .developer label {
 	display: none;
-}
+} */
 
 .first_p {
 	border-top: 2.5px solid #ffff;
@@ -1130,7 +1137,7 @@ form>.fields>.field.quarter {
 	width: calc(25% - 0.375rem);
 }
 
-label {
+/* label {
 	color: #ffffff;
 	display: block;
 	font-size: 0.8rem;
@@ -1139,7 +1146,7 @@ label {
 	line-height: 1.5;
 	margin: 0 0 1rem 0;
 	text-transform: uppercase;
-}
+} */
 
 input[type="text"],
 input[type="password"],
@@ -1275,7 +1282,8 @@ input[type="radio"]+label:before {
 	border-radius: 4px;
 	border: solid 1px #ffffff;
 	content: '';
-	display: inline-block;
+	/* display: inline-block; */
+	display: none;
 	height: 1.65rem;
 	left: 0;
 	line-height: 1.65rem;
@@ -1283,7 +1291,6 @@ input[type="radio"]+label:before {
 	text-align: center;
 	top: -0.15rem;
 	width: 1.65rem;
-	display: none;
 }
 
 input[type="checkbox"]:checked+label:before,
@@ -2720,9 +2727,9 @@ body.is-preload #header .content .inner {
 		color: #ffffff;
 	}
 
-	.developer label {
+	/* .developer label {
 		display: block;
-	}
+	} */
 
 	.icons .bxl-youtube:hover {
 		background-color: rgba(255, 255, 255, 0.075);
@@ -3257,20 +3264,141 @@ body.is-preload .redes {
 }
 
 #reservaForm {
+	/* display: flex; */
 	padding: 15px;
 }
 
-#reservaForm label {
-	margin: 5px 0;
+#reservaForm input {
+	display: block;
+	margin: 10px 0;
 }
 
-#fechaIngreso,
-#fechaEgreso {
+#fecha_ingreso,
+#fecha_egreso {
 	cursor: pointer;
 	color: #000000;
+}
+
+#valor {
+	width: 170px;
+	text-align: end;
+	color: red;
+	font-size: x-large;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bolder;
+}
+
+.cant {
+	color: #000000;
+	font-weight: bold;
+}
+
+.check {
+	color: #f9f8f8;
+}
+
+.fecha {
+	text-align: center;
 }
 
 #chrisTree {
 	display: flex;
 	height: 80px;
+}
+
+.valor {
+	display: block;
+	color: red;
+	background-color: #bbb1b1;
+	font-size: medium;
+	font-weight: 900;
+	align-items: center;
+	text-align: end;
+}
+
+/***********/
+
+.reserva {
+	width: 100%;
+	box-sizing: border-box;
+	font-weight: bold;
+	color: #000000;
+	background-color: #e0f7fa;
+	border: 1px solid #0097a7;
+	border-radius: 5px;
+	padding: 4px 6px;
+	margin: 3px 0;
+	cursor: pointer;
+	font-size: 0.9em;
+	position: relative;
+	z-index: 1;
+	pointer-events: auto;
+	word-wrap: break-word;    /* permite cortar palabras largas */
+	overflow-wrap: break-word;/* asegura compatibilidad */
+	text-align: left;
+	
+}
+
+.reserva:hover {
+  background-color: #b2ebf2;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+td {
+  position: relative; /* evita stacking raro */
+}
+
+.modal {
+  display: none;              /* oculto por defecto */
+  position: fixed;            /* se fija sobre la pantalla */
+  z-index: 9999;              /* más alto que tu alert */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* fondo semitransparente */
+}
+
+.modal .modal-content {
+  background-color: #fff;
+  color: #000000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal .modal-content h3 {
+	color: tomato;
+	font-size: xx-large;
+	text-align: center;
+}
+
+#modalValor {
+	color: #e40b0b;
+	text-align: end;
+	font-size: larger;
+}
+
+#cerrarModal {
+	background-color: #e40b0b;
+}
+
+.calendario {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.tabla-reservas {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* fixed para columnas uniformes */
+  box-sizing: border-box;
 }

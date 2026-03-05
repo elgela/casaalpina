@@ -648,10 +648,20 @@ document.getElementById("popup").addEventListener("click", function() {
     this.style.display = "none"; // Oculta el popup al hacer clic
 });
 
-// window.addEventListener("load", function() {
-// 	const loader = document.getElementById("preloader");
-// 	if (loader) {
-// 	loader.style.opacity = "0";
-// 	setTimeout(() => loader.style.display = "none", 500); // Fade-out suave
-// 	}
-// });
+window.addEventListener("load", function() {
+    const loader = document.getElementById("preloader");
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 500);
+  });
+
+  // fecha en formato latino
+  function formatoLatino(fechaISO) {
+  const fecha = new Date(fechaISO);
+  return fecha.toLocaleDateString("es-AR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
