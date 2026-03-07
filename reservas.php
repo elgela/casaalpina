@@ -1,14 +1,23 @@
 <?php
 include_once 'db.php';
 
-function listarReservasAnuales() {
+function listarReservasAnuales()
+{
     $anio = date('Y');
 
     $meses = [
-        1 => 'enero', 2 => 'febrero', 3 => 'marzo',
-        4 => 'abril', 5 => 'mayo', 6 => 'junio',
-        7 => 'julio', 8 => 'agosto', 9 => 'septiembre',
-        10 => 'octubre', 11 => 'noviembre', 12 => 'diciembre'
+        1 => 'enero',
+        2 => 'febrero',
+        3 => 'marzo',
+        4 => 'abril',
+        5 => 'mayo',
+        6 => 'junio',
+        7 => 'julio',
+        8 => 'agosto',
+        9 => 'septiembre',
+        10 => 'octubre',
+        11 => 'noviembre',
+        12 => 'diciembre'
     ];
 
     for ($mes = 1; $mes <= 12; $mes++) {
@@ -43,6 +52,10 @@ function listarReservasAnuales() {
             $reservas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             echo "<td><strong>$d</strong>";
+            // Ordenar por id_cabania
+            usort($reservas, function ($a, $b) {
+                return $a['id_cabania'] <=> $b['id_cabania'];
+            });
             foreach ($reservas as $res) {
                 echo "<div class='reserva'
                         data-id-cabania='{$res['id_cabania']}'
