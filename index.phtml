@@ -1,3 +1,7 @@
+<?php
+include_once 'personas.php';
+?>
+
 <!DOCTYPE HTML>
 <html lang="es">
 
@@ -59,6 +63,15 @@
 
 <body class="is-preload clear-mode">
 
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader-content">
+			<img src="images/Logos/logo_casaalpina-nobg.webp" alt="Casa Alpina" class="logo-spin">
+			<div class="loader"></div>
+			<h2>Cargando</h2>
+		</div>
+	</div>
+
 	<!-- Wrapper -->
 	<div id="wrapper">
 		<!-- <div id="popup">
@@ -102,7 +115,7 @@
 							<li><a href="#cabanias">Cabañas</a></li>
 							<li><a href="#predio">Predio</a></li>
 							<li><a href="#servicios">Servicios</a></li>
-							<!-- <li><a href="#promocion">Promociones</a></li> -->
+							<li><a href="#tarifas">Tarifas</a></li>
 							<li><a href="#ubicacion">Ubicación</a></li>
 							<!-- <li><a href="#reserva">Reserva</a></li> -->
 						</ul>
@@ -128,8 +141,7 @@
 				<div id="btn-cabania">
 					<button class="btn-comodidades"><a href="cabania1.html">Interior</button></a>
 					<button class="btn-videos"><a href="cab1videos.html">House tour</button></a>
-					<!-- <button class="btn-consulta"><a href="https://booking.avirato.com/?code=49886329&id_habitacion=1"
-							target="_blank">Reservar</button></a> -->
+					<!-- <button class="btn-consulta"><a href="#reserva">Reservar</button></a> -->
 				</div>
 				<p>
 					Monoambiente amplio, con capacidad para alojar hasta 4 personas. Muy confortable
@@ -435,6 +447,128 @@
 				</div>
 			</article>
 
+						<!--Tarifas-->
+			<article id="tarifas" class="tarifas">
+				<div id="temporada">
+					<div class="tarifas-temporada">
+						<h1>Temporada <span>de</span> verano</h1>
+						<h3>21 DE DICIEMBRE AL 20 DE MARZO - <span>Estadía mínima 2 noches</span></h3>
+					</div>
+					<div class="borde"></div>
+					<p>- Incluye Desayuno Artesanal y Servicio de Mucama diario</p>
+					<p>- Menores de 12 años abonan 50% - Menores de 2 años gratis</p>
+					<div class="borde"></div>
+					<div>
+						<h2>Cabaña Del Puente:</h2>
+						<label>(capacidad máxima 2 personas)</label>
+						<div class="tarifa-noche">
+							<ul>
+								<li>Por noche:</li>
+							</ul>
+							<div class="precio-item">$115.420 <span>(2 adultos)</span></div>
+						</div>
+					</div>
+					<div>
+						<h2>Cabaña Del Pinar:</h2>
+						<label>(capacidad máxima 4 personas)</label>
+						<div class="tarifa-noche">
+							<ul>
+								<li>Por noche:</li>
+							</ul>
+							<div class="precio-item">$126.962 <span>(2 adultos)</span></div>
+							<div class="precio-item">$141.462 <span>(3 adultos)</span></div>
+							<div class="precio-item">$155.962 <span>(4 adultos)</span></div>
+						</div>
+					</div>
+					<div>
+						<h2>Cabaña Del Solar:</h2>
+						<label>(capacidad máxima 5 personas)</label>
+						<div class="tarifa-noche">
+							<ul>
+								<li>Por noche:</li>
+							</ul>
+							<div class="precio-item">$138.504 <span>(2 adultos)</span></div>
+							<div class="precio-item">$153.040 <span>(3 adultos)</span></div>
+							<div class="precio-item">$167.504 <span>(4 adultos)</span></div>
+							<div class="precio-item">$182.040 <span>(5 adultos)</span></div>
+						</div>
+					</div>
+					<div>
+						<h2>Cabaña Casagrande:</h2>
+						<label>(capacidad máxima 6 personas)</label>
+						<div class="tarifa-noche">
+							<ul>
+								<li>Por noche:</li>
+							</ul>
+							<div class="precio-item">$150.046 <span>(2 adultos)</span></div>
+							<div class="precio-item">$164.546 <span>(3 adultos)</span></div>
+							<div class="precio-item">$179.046 <span>(4 adultos)</span></div>
+							<div class="precio-item">$193.546 <span>(5 adultos)</span></div>
+							<div class="precio-item">$208.046 <span>(6 adultos)</span></div>
+						</div>
+					</div>
+				</div>
+				<!-- <div id="semanaSanta">
+					<div class="tarifas-semana_santa">
+						<h1>Semana Santa</h1>
+						<h3>21 DE DICIEMBRE AL 20 DE MARZO - <span>Estadía mínima 2 noches</span></h3>
+					</div>
+					<div class="borde"></div>
+					<p>Incluye Desayuno Artesanal y Servicio de Mucama diario</p>
+					<p>Menores de 12 años abonan 50% - Menores de 2 años gratis</p>
+					<div class="borde"></div>
+					<div>
+						<h2>Cabaña Del Puente:</h2>
+						<label>(capacidad máxima 2 personas)</label>
+						<div class="tarifa-noche">
+							<ul>
+								<li>Por noche:</li>
+							</ul>
+							<div class="precio-item">$115.420 <span>(2 adultos)</span></div>
+						</div>
+					</div>
+					<div>
+						<h2>Cabaña Del Pinar:</h2>
+						<label>(capacidad máxima 4 personas)</label>
+						<div class="tarifa-noche">
+							<ul>
+								<li>Por noche:</li>
+							</ul>
+							<div class="precio-item">$126.962 <span>(2 adultos)</span></div>
+							<div class="precio-item">$141.462 <span>(3 adultos)</span></div>
+							<div class="precio-item">$155.962 <span>(4 adultos)</span></div>
+						</div>
+					</div>
+					<div>
+						<h2>Cabaña Del Solar:</h2>
+						<label>(capacidad máxima 5 personas)</label>
+						<div class="tarifa-noche">
+							<ul>
+								<li>Por noche:</li>
+							</ul>
+							<div class="precio-item">$138.504 <span>(2 adultos)</span></div>
+							<div class="precio-item">$153.040 <span>(3 adultos)</span></div>
+							<div class="precio-item">$167.504 <span>(4 adultos)</span></div>
+							<div class="precio-item">$182.040 <span>(5 adultos)</span></div>
+						</div>
+					</div>
+					<div>
+						<h2>Cabaña Casagrande:</h2>
+						<label>(capacidad máxima 6 personas)</label>
+						<div class="tarifa-noche">
+							<ul>
+								<li>Por noche:</li>
+							</ul>
+							<div class="precio-item">$150.046 <span>(2 adultos)</span></div>
+							<div class="precio-item">$164.546 <span>(3 adultos)</span></div>
+							<div class="precio-item">$179.046 <span>(4 adultos)</span></div>
+							<div class="precio-item">$193.546 <span>(5 adultos)</span></div>
+							<div class="precio-item">$208.046 <span>(6 adultos)</span></div>
+						</div>
+					</div>
+				</div> -->
+			</article>
+
 			<!--Promociones-->
 			<article id="promocion">
 				<div class="aviso_promo">
@@ -473,45 +607,100 @@
 			</article>
 
 			<!--Reserva-->
-			<!-- <article id="reserva">
-				<h1>Formulario de reserva</h1>
-				<form action="url_envio_datos" method="post" id="reservaForm">
-					<label for="fechaIngreso">Fecha ingreso:</label>
-					<input type="date" name="" id="fechaIngreso" required>
-					<label for="fechaEgreso">Fecha egreso:</label>
-					<input type="date" name="" id="fechaEgreso" required>
+			<article id="reservar">
+				<!-- <a href="#reservar"><button>Reservar</button></a> -->
+				<a href="#calendario"><button>Calendario</button></a>
+				<a href="#personas"><button>Personas</button></a>
+
+				<h1>Ingresar reserva</h1>
+				<form action="reservar.php" method="POST" id="reservaForm">
+					<p>Nombre</p>
+					<input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+					<p>Apellido</p>
+					<input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+					<p>DNI</p>
+					<input type="text" name="dni" id="dni" placeholder="DNI" required>
+					<p>Email</p>
+					<input type="email" name="email" id="email" placeholder="Email" required>
+					<p>Teléfono</p>
+					<input type="text" name="telefono" id="telefono" placeholder="Teléfono">
+					<p>Cabaña</p>
+					<select name="cabania" id="cabania" required>
+						<option value="" disabled selected>Seleccione Cabaña</option>
+						<option value="1">Del Pinar</option>
+						<option value="2">Del Solar</option>
+						<option value="3">Del Puente</option>
+						<option value="4">Casagrande</option>
+					</select>
+					<br>
+					<p>Adultos: </p><input class="cant" type="number" name="adultos" id="adultos" min="1" max="6" required>
+					<p>Niños: </p><input class="cant" type="number" name="ninios" id="ninios" min="0" max="5">
+					<input type="checkbox" name="bebes" id="bebes">
+					<label for="bebes">Bebés</label>
+					<br>
+					<p>Ingreso: </p><input type="date" name="llegada" id="llegada" required>
+					<p>Egreso: </p><input type="date" name="salida" id="salida" required>
+					<p>Noches: </p><input class="cant" type="number" name="noches" id="noches" min="1">
+					<br>
+					<p>Notas: </p><textarea name="notas" id="notas"></textarea>
+					<p>Valor: </p><input type="number" name="valor" id="valor" min="1" required>
+					<br>
+					<button type="submit">Agregar</button>
 				</form>
-			</article> -->
+				<!-- <div id="calendario">
+					</div> -->
+			</article>
+				
+			<article id="calendario">
+				<a href="#reservar"><button>Reservar</button></a>
+				<!-- <a href="#calendario"><button>Calendario</button></a> -->
+				<a href="#personas"><button>Personas</button></a>
+				<h1>Calendario</h1>
+
+				<?php listarReservasAnuales(); ?>	
+			</article>
+			
+			<!--Usuarios-->
+			<article id="personas">
+				<div class="listaPersonas">
+					<a href="#reservar"><button>Reservar</button></a>
+					<a href="#calendario"><button>Calendario</button></a>
+					<!-- <a href="#personas"><button>Personas</button></a> -->
+					<h1>Personas</h1>
+
+					<?php listaPersonas(); ?>
+				</div>
+			</article>
 
 		</div>
-
+		
 		<footer id="footerContacto">
 			<p class="copyright">Casa Alpina</p>
 			<p class="copyright">WhatsApp: 2494549919</p>
 			<p class="copyright">Email: contacto@casaalpina.com.ar</p>
 			<p class="copyright">Icalma 2904 - Paraje El Centinela, Tandil - Buenos Aires - Argentina</p>
 		</footer>
-
+		
 		<!-- Footer -->
 		<ul class="icons">
 			<li><a href="https://www.facebook.com/casaalpina.tandil" target="_blank"
-					class="icon brands fa-facebook-f"><span class="label"></span></a></li>
+			class="icon brands fa-facebook-f"><span class="label"></span></a></li>
 			<li><a href="https://www.instagram.com/casaalpina/" target="_blank" class="icon brands fa-instagram"><span
-						class="label"></span></a></li>
+			class="label"></span></a></li>
 			<li><a href="https://www.tiktok.com/@casaalpina" target="_blank" class='bx bxl-tiktok'><span
-						class="label"></span></a></li>
+			class="label"></span></a></li>
 			<!-- <li><a href="https://www.youtube.com/c/Caba%C3%B1asCASAALPINATandil" target="_blank"
 					class='bx bxl-youtube'><span class="label"></span></a></li> -->
-		</ul>
-		<div class="redes">
-			<div class="whatsapp">
-				<p>WhatsApp</p>
+				</ul>
+				<div class="redes">
+					<div class="whatsapp">
+						<p>WhatsApp</p>
 				<a href="https://wa.me/2494549919" target="_blank">
 					<i class='bx bxl-whatsapp'></i>
 				</a>
 			</div>
 			<div class="buttonReserva">
-				<a href="https://link.minihotel.info/CasaAlpina" target="_blank">Reserva Online</a>
+				<a href="https://frame2.hotelpms.io/BookingFrameClient/hotel/EEE04262917EDAA8099D1816C03D651D/e2d8af9e-82cf-4b24-ba19-fc7b08142f0e/book/rooms?currency=ARS&language=es-ES&rp=" target="_blank">Reserva Online</a>
 			</div>
 			<div class="mail">
 				<p>E-Mail</p>
@@ -520,7 +709,7 @@
 				</a>
 			</div>
 		</div>
-
+		
 		<footer id="footer">
 			<p class="copyright first_p">&copy;2024</p>
 			<p class="copyright">casaalpina</p>
@@ -528,15 +717,37 @@
 			<p class="copyright">Email: contacto@casaalpina.com.ar</p>
 			<p class="copyright">Icalma 2904 - Paraje El Centinela, Tandil - Buenos Aires - Argentina</p>
 			<p class="developer">Developed by<a href="https://turesponsive.com.ar/" target="_blank" class="link"><img
-						src="./images/Logos/logo_turesponsive.jpg" alt="logo de turesponsive"
-						class="logoTR">&nbsp;turesponsive</a><label>entrar</label></p>
+			src="./images/Logos/logo_turesponsive.jpg" alt="logo de turesponsive"
+			class="logoTR">&nbsp;turesponsive</a><label>entrar</label></p>
 			<div class="qr">
 				<a href="http://qr.afip.gob.ar/?qr=Jr5QAchEiPMiN4Ouad4hBw,," target="_F960AFIPInfo"><img
-						src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg"></a>
+				src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg"></a>
 			</div>
 		</footer>
 	</div>
-
+	
+	<!--Modal Reserva-->
+	<div id="modalReserva" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h3>Detalle de Reserva</h3>
+			<p id="modalCabania"></p>
+			<p id="modalNombre"></p>
+			<p id="modalApellido"></p>
+			<p id="modalDNI"></p>
+			<p id="modalId"></p>
+			<p id="modalAdultos"></p>
+			<p id="modalNinios"></p>
+			<p id="modalBebes"></p>
+			<p id="modalIngreso"></p>
+			<p id="modalEgreso"></p>
+			<p id="modalNoches"></p>
+			<p id="modalNotas"></p>
+			<!-- <input type="hidden" name="lateCheck" id="modalLate"> -->
+			<p id="modalValor"></p>
+		</div>
+	</div>
+	
 	<!-- BG -->
 	<div id="bg"></div>
 
@@ -546,7 +757,18 @@
 	<script src="./assets/js/breakpoints.min.js"></script>
 	<script src="./assets/js/util.js"></script>
 	<script src="./assets/js/main.js"></script>
+	<script src="./assets/js/modal.js"></script>
 	<!-- <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script> -->
+
+	<script>
+		window.addEventListener("load", function() {
+			const loader = document.getElementById("preloader");
+			if (loader) {
+			loader.style.opacity = "0";
+			setTimeout(() => loader.style.display = "none", 500); // Fade-out suave
+			}
+		});
+	</script>
 
 </body>
 

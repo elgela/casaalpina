@@ -35,31 +35,156 @@
 	color: #1b1f22;
 } */
 
-.aviso_promo {
-	/* background-color: #f9f8f8; */
-	height: auto;
+/* Fondo negro cubriendo toda la pantalla */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-.conoce_tandil img {
-	display: flex;
-	width: 100%;
-	height: 80%;
+/* Animación de giro */
+.logo-spin {
+  width: 120px;
+  animation: spin 2s linear infinite;
 }
 
-.conoce_tandil label {
-	/* background-color: #f9f8f8; */
-	padding: 1%;
-	border-radius: 20px;
-	color: #f9f8f8;
-	font-weight: 500;
+/* Contenedor centrado */
+.preloader-content {
+	text-align: center;
 }
 
-.conoce_tandil label span {
-	display: block;
-	font-weight: bold;
+/* Logo */
+.logo {
+	width: 150px;
+	margin-bottom: 20px;
+}
+
+/* Spinner simple */
+.loader {
+  margin: auto;
+  border: 6px solid #a9e8fb;
+  border-top: 6px solid #57d5fb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite; /* 👈 esto hace que gire */
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*tarifas*/
+#temporada {
+	background-color: #fff;
+	margin-bottom: 20px;
+	border-radius: 4px;
+}
+
+#semanaSanta {
+	background-color: #fff;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+
+.tarifas-temporada h1,
+.tarifas-semana_santa h1 {
+	text-align: center;
+	text-transform: uppercase;
+	color: #000;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 600;
+}
+
+.tarifas h2 {
+	text-align: center;
+	color: #000;
+	text-transform: none;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-decoration: underline;
+	font-size: 35px;
+	letter-spacing: 1px;
+}
+
+.tarifas-temporada h3,
+.tarifas-semana_santa h3 {
+	text-align: center;
+	color: #000;
+	font-style: italic;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tarifas-temporada span,
+.tarifas-semana_santa span {
+	text-transform: none;
+}
+
+.tarifas .borde {
+	border: solid 1px rgb(28, 84, 141);
+	margin: 10px;
+}
+
+.tarifas p {
+	color: #000;
+	text-align: center;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-style: italic;
+}
+
+.tarifas label {
+	color: #000;
+	text-transform: none;
+	font-weight: 600;
+}
+
+.tarifas ul li {
+	color: #000;
+	list-style-type: disc;
+	margin-left: 30px;
 	font-size: large;
 }
 
+.precio-item {
+	color: #000;
+}
+
+.tarifa-noche {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: #333;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.tarifa-noche p {
+  margin: 0 0 6px;
+  font-weight: bold;
+}
+
+.precio-item {
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+.precio-item span {
+  color: #666;
+  margin-left: 6px;
+}
+
+.espacio {
+	height: 30px;
+}
 
 .ir-arriba {
 	background-repeat: no-repeat;
@@ -1150,7 +1275,7 @@ input[type="radio"]+label:before {
 	border-radius: 4px;
 	border: solid 1px #ffffff;
 	content: '';
-	display: inline-block;
+	display: none;
 	height: 1.65rem;
 	left: 0;
 	line-height: 1.65rem;
@@ -1158,7 +1283,6 @@ input[type="radio"]+label:before {
 	text-align: center;
 	top: -0.15rem;
 	width: 1.65rem;
-	display: none;
 }
 
 input[type="checkbox"]:checked+label:before,
@@ -2079,7 +2203,7 @@ body.is-preload #header .content .inner {
 
 }
 
-/* @media screen and (max-width: 980px) {
+@media screen and (max-width: 806px) {
 
 	#header .content p br {
 		display: none;
@@ -2092,7 +2216,7 @@ body.is-preload #header .content .inner {
 		height: 100%;
 	}
 
-} */
+}
 
 @media screen and (max-width: 736px) {
 
@@ -2943,7 +3067,8 @@ body.is-preload #header .content .inner {
 #seguridad .imagenes,
 #internet .imagenes {
 	display: flex;
-	gap: 10px;   /* espacio entre imágenes */
+	gap: 10px;
+	/* espacio entre imágenes */
 	width: 100%;
 	height: auto;
 	overflow: hidden;
@@ -2956,9 +3081,11 @@ body.is-preload #header .content .inner {
 #mascotas .imagenes img,
 #seguridad .imagenes img,
 #internet .imagenes img {
-	width: 100%;   /* cada imágen ocupa toda su columna */
+	width: 100%;
+	/* cada imágen ocupa toda su columna */
 	height: auto;
-	object-fit: cover;   /* Ajusta la imagen sin distorsión */
+	object-fit: cover;
+	/* Ajusta la imagen sin distorsión */
 	border-radius: 10px;
 	padding: 2px;
 	cursor: pointer;
@@ -3131,21 +3258,208 @@ body.is-preload .redes {
 	opacity: 0;
 }
 
-#reservaForm {
-	padding: 15px;
-}
-
-#reservaForm label {
-	margin: 5px 0;
-}
-
-#fechaIngreso,
-#fechaEgreso {
+#llegada,
+#salida {
 	cursor: pointer;
 	color: #000000;
+}
+
+#valor {
+	width: 170px;
+	text-align: end;
+	color: red;
+	font-size: x-large;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bolder;
+}
+
+.cant {
+	color: #000000;
+	font-weight: bold;
+}
+
+.check {
+	color: #f9f8f8;
+}
+
+.fecha {
+	text-align: center;
 }
 
 #chrisTree {
 	display: flex;
 	height: 80px;
 }
+
+.valor {
+	display: block;
+	color: red;
+	background-color: #bbb1b1;
+	font-size: medium;
+	font-weight: 900;
+	align-items: center;
+	text-align: end;
+}
+
+/* RESERVAS */
+.reserva {
+	width: 100%;
+	box-sizing: border-box;
+	font-weight: bold;
+	color: #000000;
+	background-color: #13eb3b;
+	/* border: 1px solid #0097a7; */
+	border-radius: 5px;
+	padding: 4px 6px;
+	margin: 3px 0;
+	cursor: pointer;
+	font-size: 0.9em;
+	position: relative;
+	z-index: 1;
+	pointer-events: auto;
+	word-wrap: break-word;    /* permite cortar palabras largas */
+	overflow-wrap: break-word; /* asegura compatibilidad */
+	text-align: left;
+}
+
+.reserva:hover {
+  background-color: #9fecad;
+}
+
+#reservaForm {
+	padding: 15px;
+	background-color: #f8feff;
+}
+
+#reservaForm input {
+	display: block;
+	margin: 10px 0;
+	border-color: #000;
+	color: #000;
+	font-weight: bold;
+}
+
+#reservaForm select,
+#reservaForm textarea {
+	border-color: #000;
+	background-color: #f8feff;
+	color: #000;
+	font-weight: bold;
+}
+
+#reservaForm option {
+	font-weight: bold;
+}
+
+#reservaForm label,
+#reservaForm p {
+	color: #000;
+	font-weight: bold;
+}
+
+#reservForm text {
+	color: #000;
+}
+
+/* CALENDARIO-PERSONAS */
+.calendario {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.tabla-reservas,
+.datos_personas {
+	width: 100%;
+	max-width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed; /* fixed para columnas uniformes */
+	box-sizing: border-box;
+	background-color: #f8feff;
+}
+
+.tabla-reservas strong {
+	color: #000;
+}
+
+.reserva.vacia {
+	background-color: #f8feff;
+	width: 100%;
+	/* box-sizing: border-box; */
+	font-weight: bold;
+	color: #000000;
+	/* border-radius: 5px; */
+	padding: 4px 6px;
+	margin: 3px 0;
+	cursor: auto;
+	font-size: 1.15em;
+	/* position: relative;
+	z-index: 1;
+	pointer-events: auto; */
+}
+
+/* PERSONAS */
+.datos_personas thead {
+	text-align: center;
+	border-bottom: solid 2.5px #000;
+}
+
+.datos_personas td {
+	text-align: center;
+	color: #000;
+	border-top: solid 1px #000;
+}
+
+.datos_personas th {
+	text-align: center;
+	color: #000;
+	border-bottom: solid 4px #000;
+}
+
+/* MODAL */
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+td {
+  position: relative; /* evita stacking raro */
+}
+
+.modal {
+  display: none;              /* oculto por defecto */
+  position: fixed;            /* se fija sobre la pantalla */
+  z-index: 9999;              /* más alto que tu alert */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* fondo semitransparente */
+}
+
+.modal .modal-content {
+  background-color: #fff;
+  color: #000000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal .modal-content h3 {
+	color: tomato;
+	font-size: xx-large;
+	text-align: center;
+}
+
+#modalValor {
+	color: #e40b0b;
+	text-align: end;
+	font-size: larger;
+}
+
+#cerrarModal {
+	background-color: #e40b0b;
+}
+
