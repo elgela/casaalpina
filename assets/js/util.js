@@ -619,49 +619,44 @@ function irArriba() {
 
 /////////////////////popup///////////////////////////////
 // window.onload = function () {
-	document.addEventListener("mousemove", function (event) {
-		if (event.clientY < 1) { // Si el cursor está cerca de la parte superior
-			document.getElementById("popup").style.display = "block";
-		}
-	});
+document.addEventListener("mousemove", function (event) {
+	if (event.clientY < 1) { // Si el cursor está cerca de la parte superior
+		document.getElementById("popup").style.display = "block";
+	}
+});
 
-	document.getElementById("popup").addEventListener("click", function () {
-		this.style.display = "none"; // Oculta el popup cuando el usuario haga clic en él
-	});
+document.getElementById("popup").addEventListener("click", function () {
+	this.style.display = "none"; // Oculta el popup cuando el usuario haga clic en él
+});
 // };
 
 ////////arrastre rapido del mouse hacia arriba///////////
 let lastY = window.innerHeight; // Posición inicial fuera del área superior
 
-document.addEventListener("mousemove", function(event) {
-    let currentY = event.clientY;
-    let velocity = lastY - currentY; // Calculamos la velocidad del movimiento
+document.addEventListener("mousemove", function (event) {
+	let currentY = event.clientY;
+	let velocity = lastY - currentY; // Calculamos la velocidad del movimiento
 
-    if (velocity > 10 && currentY < 100) { // Detecta un movimiento rápido hacia arriba
-        document.getElementById("popup").style.display = "block";
-    }
+	if (velocity > 10 && currentY < 100) { // Detecta un movimiento rápido hacia arriba
+		document.getElementById("popup").style.display = "block";
+	}
 
-    lastY = currentY; // Actualizamos la posición del cursor
+	lastY = currentY; // Actualizamos la posición del cursor
 });
 
-document.getElementById("popup").addEventListener("click", function() {
-    this.style.display = "none"; // Oculta el popup al hacer clic
+document.getElementById("popup").addEventListener("click", function () {
+	this.style.display = "none"; // Oculta el popup al hacer clic
 });
 
-// window.addEventListener("load", function() {
-//     const loader = document.getElementById("preloader");
-//     loader.style.opacity = "0";
-//     setTimeout(() => loader.style.display = "none", 500);
-//   });
 
-  // fecha en formato latino
-  function formatoLatino(fechaISO) {
-  const fecha = new Date(fechaISO);
-  return fecha.toLocaleDateString("es-AR", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit"
-  });
+// fecha en formato latino
+function formatoLatino(fechaISO) {
+	const fecha = new Date(fechaISO);
+	return fecha.toLocaleDateString("es-AR", {
+		day: "2-digit",
+		month: "2-digit",
+		year: "numeric",
+		hour: "2-digit",
+		minute: "2-digit"
+	});
 }

@@ -45,8 +45,8 @@ function listarReservasAnuales() {
                                    FROM reservas r
                                    JOIN personas p ON r.id_persona = p.id_persona
                                    JOIN cabanias c ON r.id_cabania = c.id_cabania
-                                   WHERE r.llegada <= :fecha
-                                     AND r.salida >= :fecha");
+                                   WHERE DATE(r.llegada) <= :fecha
+                                     AND DATE(r.salida) >= :fecha");
             $stmt->execute(['fecha' => $fecha]);
             $reservas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

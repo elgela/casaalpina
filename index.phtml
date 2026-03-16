@@ -57,7 +57,7 @@ include_once 'personas.php';
     src="https://www.facebook.com/tr?id=788395913348849&ev=PageView&noscript=1"/></noscript>
 </head>
 
-<body class="is-preload clear-mode">
+<body class="clear-mode"> <!-- quitada clase .is-preload -->
 
 	<!-- Preloader -->
 	<div id="preloader">
@@ -65,8 +65,8 @@ include_once 'personas.php';
 			<img src="images/Logos/logo_casaalpina-nobg.webp" srcset="./images/Logos/logo_casaalpina-nobg.webp 400w,
                                                                 ./images/Logos/logo_casaalpina-nobg.webp 800w,
                                                                 ./images/Logos/logo_casaalpina-nobg.webp 1200w" sizes="(max-width: 600px) 400px,
-                                                                (max-width: 1200px) 800px" alt="Casa Alpina logo" class="logo-spin">
-			<!-- <div class="loader"></div> -->
+                                                                (max-width: 1200px) 800px" alt="Casa Alpina logo" class="logo logo-spin">
+			<div class="loader"></div>
 			<h2>Cargando</h2>
 		</div>
 	</div>
@@ -326,7 +326,7 @@ include_once 'personas.php';
 									class="wifi" alt="wifi" id="wifi-img"></a>
 						</section>
 						<section>
-							<a href="#info"><img src="./images/Logos/artculos_para_bebe_logo.webp" loading="lazy"
+							<a href="#info"><img src="./images/Logos/articulos_para_bebe_logo.webp" loading="lazy"
 									id="practicuna-img"></a>
 						</section>
 					</article>
@@ -635,7 +635,7 @@ include_once 'personas.php';
 					<input type="text" name="telefono" id="telefono" placeholder="Teléfono">
 					<p>Cabaña</p>
 					<select name="cabania" id="cabania" required>
-						<option value="" disabled selected>Seleccione Cabaña</option>
+						<option value="" disabled selected>Seleccionar Cabaña</option>
 						<option value="1">Del Pinar</option>
 						<option value="2">Del Solar</option>
 						<option value="3">Del Puente</option>
@@ -644,8 +644,12 @@ include_once 'personas.php';
 					<br>
 					<p>Adultos: </p><input class="cant" type="number" name="adultos" id="adultos" min="1" max="6" required>
 					<p>Niños: </p><input class="cant" type="number" name="ninios" id="ninios" min="0" max="5">
-					<input type="checkbox" name="bebes" id="bebes">
-					<label for="bebes">Bebés</label>
+					<p>Bebés:</p>
+					<select name="bebes" id="bebes" style="cursor: pointer;">
+						<option value="" disabled selected></option>
+						<option value="1">Si</option>
+						<option value="0">No</option>
+					</select>
 					<br>
 					<p>Ingreso: </p><input type="date" name="llegada" id="llegada" required>
 					<p>Egreso: </p><input type="date" name="salida" id="salida" required>
@@ -654,7 +658,7 @@ include_once 'personas.php';
 					<p>Notas: </p><textarea name="notas" id="notas"></textarea>
 					<p>Valor: </p><input type="number" name="valor" id="valor" min="1" required>
 					<br>
-					<button type="submit">Agregar</button>
+					<button type="submit" class="add">Agregar</button>
 				</form>
 				<!-- <div id="calendario">
 					</div> -->
@@ -768,15 +772,6 @@ include_once 'personas.php';
 	<script src="./assets/js/main.js"></script>
 	<script src="./assets/js/modal.js"></script>
 	<!-- <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script> -->
-	<script>
-		window.addEventListener("load", function() {
-			const loader = document.getElementById("preloader");
-			if (loader) {
-			loader.style.opacity = "0";
-			setTimeout(() => loader.style.display = "none", 500); // Fade-out suave
-			}
-		});
-	</script>
 
 </body>
 

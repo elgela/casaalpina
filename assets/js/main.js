@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ///////////////////////////////captcha//////////////////////////////////////////////////////////////
 
-const {RecaptchaEnterpriseServiceClient} = require('@google-cloud/recaptcha-enterprise');
+// const {RecaptchaEnterpriseServiceClient} = require('@google-cloud/recaptcha-enterprise');
 
 /**
   * Crea una evaluación para analizar el riesgo de una acción de la IU.
@@ -491,3 +491,16 @@ async function createAssessment({
     return null;
   }
 }
+
+// logo de carga de página
+document.addEventListener("DOMContentLoaded", function() {
+  document.body.classList.remove("is-preload");
+});
+
+window.addEventListener("load", function() {
+  const loader = document.getElementById("preloader");
+  if (loader) {
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 500);
+  }
+});

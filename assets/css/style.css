@@ -37,22 +37,23 @@
 
 /* Fondo negro cubriendo toda la pantalla */
 #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	transition: opacity 0.5s ease;
 }
 
 /* Animación de giro */
 .logo-spin {
-  width: 120px;
-  animation: spin 2s linear infinite;
+	width: 120px;
+	animation: spin 2s linear infinite;
 }
 
 /* Contenedor centrado */
@@ -68,18 +69,24 @@
 
 /* Spinner simple */
 .loader {
-  margin: auto;
-  border: 6px solid #a9e8fb;
-  border-top: 6px solid #57d5fb;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 2s linear infinite; /* 👈 esto hace que gire */
+	margin: auto;
+	border: 6px solid #a9e8fb;
+	border-top: 6px solid #57d5fb;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	animation: spin 2s linear infinite;
+	/* 👈 esto hace que gire */
 }
 
 @keyframes spin {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 /*tarifas*/
@@ -158,28 +165,28 @@
 }
 
 .tarifa-noche {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 16px;
-  color: #333;
-  padding: 10px 20px;
-  background-color: #fff;
-  border-radius: 6px;
-  width: fit-content;
+	font-family: 'Segoe UI', sans-serif;
+	font-size: 16px;
+	color: #333;
+	padding: 10px 20px;
+	background-color: #fff;
+	border-radius: 6px;
+	width: fit-content;
 }
 
 .tarifa-noche p {
-  margin: 0 0 6px;
-  font-weight: bold;
+	margin: 0 0 6px;
+	font-weight: bold;
 }
 
 .precio-item {
-  margin-left: 20px;
-  margin-bottom: 4px;
+	margin-left: 20px;
+	margin-bottom: 4px;
 }
 
 .precio-item span {
-  color: #666;
-  margin-left: 6px;
+	color: #666;
+	margin-left: 6px;
 }
 
 .espacio {
@@ -1649,14 +1656,18 @@ table tbody tr:nth-child(2n + 1) {
 
 table td {
 	padding: 0.75em 0.75em;
+	border-bottom: 1px #000 solid;
+	border-right: 1px #000 solid;
 }
 
 table th {
-	color: #ffffff;
+	color: #0a0a0a;
 	font-size: 0.9em;
 	font-weight: 600;
 	padding: 0 0.75em 0.75em 0.75em;
-	text-align: left;
+	text-align: center;
+	border-bottom: 2px #000 solid;
+	border-right: 1px #000 solid;
 }
 
 table thead {
@@ -3317,13 +3328,15 @@ body.is-preload .redes {
 	position: relative;
 	z-index: 1;
 	pointer-events: auto;
-	word-wrap: break-word;    /* permite cortar palabras largas */
-	overflow-wrap: break-word; /* asegura compatibilidad */
+	word-wrap: break-word;
+	/* permite cortar palabras largas */
+	overflow-wrap: break-word;
+	/* asegura compatibilidad */
 	text-align: left;
 }
 
 .reserva:hover {
-  background-color: #9fecad;
+	background-color: #9fecad;
 }
 
 #reservaForm {
@@ -3341,6 +3354,7 @@ body.is-preload .redes {
 
 #reservaForm select,
 #reservaForm textarea {
+	width: 24ch;
 	border-color: #000;
 	background-color: #f8feff;
 	color: #000;
@@ -3351,7 +3365,14 @@ body.is-preload .redes {
 	font-weight: bold;
 }
 
-#reservaForm label,
+#reservaForm #bebes {
+	width: 3ch;
+	text-align: center;
+	height: 30px;
+	color: #000;
+}
+
+#reservaForm #reservaForm label,
 #reservaForm p {
 	color: #000;
 	font-weight: bold;
@@ -3359,6 +3380,10 @@ body.is-preload .redes {
 
 #reservForm text {
 	color: #000;
+}
+
+#reservaForm button.add {
+	background-color: #333;
 }
 
 /* CALENDARIO-PERSONAS */
@@ -3372,7 +3397,8 @@ body.is-preload .redes {
 	width: 100%;
 	max-width: 100%;
 	border-collapse: collapse;
-	table-layout: fixed; /* fixed para columnas uniformes */
+	table-layout: fixed;
+	/* fixed para columnas uniformes */
 	box-sizing: border-box;
 	background-color: #f8feff;
 }
@@ -3417,34 +3443,39 @@ body.is-preload .redes {
 
 /* MODAL */
 .close {
-  float: right;
-  cursor: pointer;
+	float: right;
+	cursor: pointer;
 }
 
 td {
-  position: relative; /* evita stacking raro */
+	position: relative;
+	/* evita stacking raro */
 }
 
 .modal {
-  display: none;              /* oculto por defecto */
-  position: fixed;            /* se fija sobre la pantalla */
-  z-index: 9999;              /* más alto que tu alert */
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5); /* fondo semitransparente */
+	display: none;
+	/* oculto por defecto */
+	position: fixed;
+	/* se fija sobre la pantalla */
+	z-index: 9999;
+	/* más alto que tu alert */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	/* fondo semitransparente */
 }
 
 .modal .modal-content {
-  background-color: #fff;
-  color: #000000;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 5px;
-  width: 400px;
-  max-width: 90%;
+	background-color: #fff;
+	color: #000000;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	margin: 10% auto;
+	padding: 20px;
+	border-radius: 5px;
+	width: 400px;
+	max-width: 90%;
 }
 
 .modal .modal-content h3 {
@@ -3462,4 +3493,3 @@ td {
 #cerrarModal {
 	background-color: #e40b0b;
 }
-
