@@ -1655,7 +1655,7 @@ table tbody tr:nth-child(2n + 1) {
 }
 
 table td {
-	padding: 0.75em 0.75em;
+	/* padding: 0.75em 0.75em; */
 	border-bottom: 1px #000 solid;
 	border-right: 1px #000 solid;
 }
@@ -3124,7 +3124,7 @@ article label {
 }
 
 #main article p {
-	font-size: large;
+	font-size: medium;
 }
 
 #main article.active {
@@ -3318,9 +3318,9 @@ body.is-preload .redes {
 	box-sizing: border-box;
 	font-weight: bold;
 	color: #000000;
-	background-color: #13eb3b;
+	/* background-color: #13eb3b; */
 	/* border: 1px solid #0097a7; */
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	padding: 4px 6px;
 	margin: 3px 0;
 	cursor: pointer;
@@ -3336,7 +3336,7 @@ body.is-preload .redes {
 }
 
 .reserva:hover {
-	background-color: #9fecad;
+	filter: brightness(1.5);
 }
 
 #reservaForm {
@@ -3396,7 +3396,6 @@ body.is-preload .redes {
 .datos_personas {
 	width: 100%;
 	max-width: 100%;
-	border-collapse: collapse;
 	table-layout: fixed;
 	/* fixed para columnas uniformes */
 	box-sizing: border-box;
