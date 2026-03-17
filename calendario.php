@@ -63,6 +63,13 @@ function listarReservasAnuales() {
                 4 => 'Casagrande'
             ];
 
+            $coloresCabanias = [
+                1 => '#FF5733', // Del Pinar
+                2 => '#33FF57', // Del Solar
+                3 => '#3357FF', // Del Puente
+                4 => '#FFD700'  // Casagrande
+            ];
+
             foreach ($cabanias as $idCabania => $nombreCabania) {
                 // Buscar si hay reserva para esta cabaña
                 $reservaCabana = null;
@@ -74,8 +81,10 @@ function listarReservasAnuales() {
                 }
 
                 if ($reservaCabana) {
+                    $color = $coloresCabanias[$idCabania] ?? '#ccc'; // color por defecto
                     // Mostrar reserva
                     echo "<div class='reserva'
+                            style='background-color: {$color};'
                             data-id-cabania='{$nombreCabania}'
                             data-nombre='{$reservaCabana['nombre']}'
                             data-apellido='{$reservaCabana['apellido']}'
@@ -99,7 +108,7 @@ function listarReservasAnuales() {
                         </div>";
                 }
             }
-            
+
             if ((($d + $primerDiaSemana - 1) % 7) == 0) {
                 echo "</tr><tr>";
             }
