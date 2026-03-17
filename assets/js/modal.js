@@ -32,7 +32,7 @@ function abrirModal(card) {
   document.getElementById('modalNotas').textContent = "Notas: " + card.dataset.notas;
   const valor = parseFloat(card.dataset.valor);
   const valorFormateado = valor.toLocaleString('es-AR', { minimumFractionDigits: 2 });
-  document.getElementById('modalValor').textContent = "Valor: $" + valorFormateado;
+  document.getElementById('modalValor').textContent = "Valor: $ " + valorFormateado;
 
   modal.style.display = "block";
 
