@@ -84,7 +84,7 @@ function listarReservasAnuales() {
                     $color = $coloresCabanias[$idCabania] ?? '#ccc'; // color por defecto
                     // Mostrar reserva
                     echo "<div class='reserva'
-                            style='background-color: {$color};'
+                            style='background-color: {$color};border-bottom: 1px #000 solid;border-top:1px #000 solid;'
                             data-id-cabania='{$nombreCabania}'
                             data-nombre='{$reservaCabana['nombre']}'
                             data-apellido='{$reservaCabana['apellido']}'
