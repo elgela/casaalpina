@@ -18,14 +18,14 @@ function listaPersonas() {
             </thead>
             <tbody>";
             foreach ($personas as $persona) {
-                echo '<tr>
-                        <td>' . htmlspecialchars($persona->id_persona) . '</td>
-                        <td>' . htmlspecialchars($persona->nombre) . '</td>
-                        <td>' . htmlspecialchars($persona->apellido) . '</td>
-                        <td>' . htmlspecialchars($persona->dni) . '</td>
-                        <td>' . htmlspecialchars($persona->email) . '</td>
-                        <td>' . htmlspecialchars($persona->telefono) . '</td>
-                    </tr>';
+                echo "<tr>
+                        <td>" . htmlspecialchars($persona->id_persona) . "</td>
+                        <td>" . htmlspecialchars($persona->nombre) . "</td>
+                        <td>" . htmlspecialchars($persona->apellido) . "</td>
+                        <td>" . htmlspecialchars($persona->dni) . "</td>
+                        <td>" . htmlspecialchars($persona->email) . "</td>
+                        <td>" . htmlspecialchars($persona->telefono) . "</td>
+                    </tr>";
             }
     echo "</tbody></table>";
 }
