@@ -25,7 +25,7 @@ function listarReservasAnuales() {
 
         echo "<h2>Mes: " . ucfirst($meses[$mes]) . "</h2>";
         echo "<table border='1' style='border-collapse:collapse; text-align:left;' class='tabla-reservas'>";
-        echo "<tr style='text-align:center;'>
+        echo "<tr style='text-align:center;background-color:#FFD500;'>
                 <th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th><th>Dom</th>
               </tr><tr>";
 
@@ -67,7 +67,7 @@ function listarReservasAnuales() {
                 1 => '#FF5733', // Del Pinar
                 2 => '#33FF57', // Del Solar
                 3 => '#3357FF', // Del Puente
-                4 => '#FFD700'  // Casagrande
+                4 => '#f532be'  // Casagrande
             ];
 
             foreach ($cabanias as $idCabania => $nombreCabania) {
