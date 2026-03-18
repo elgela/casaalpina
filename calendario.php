@@ -24,6 +24,7 @@ function listarReservasAnuales() {
         $primerDiaSemana = date('N', strtotime("$anio-$mes-01"));
 
         echo "<h2>Mes: " . ucfirst($meses[$mes]) . "</h2>";
+        echo "<div style='display:flex;'><p>C1:</p><p style='margin:5px;border:1px #000 solid;width:5px;height:5px;padding:7px;background-color:#FF5733'></p><p>C2: </p><p style='margin:5px;border:1px #000 solid;width:5px;height:5px;padding:7px;background-color:#33FF57'></p><p>C3: </p><p style='margin:5px;border:1px #000 solid;width:5px;height:5px;padding:7px;background-color:#3357FF'></p><p>C4: </p><p style='margin:5px;border:1px #000 solid;width:5px;height:5px;padding:7px;background-color:#F532BE'></p></div>";
         echo "<table border='1' style='border-collapse:collapse; text-align:left;' class='tabla-reservas'>";
         echo "<tr style='text-align:center;background-color:#FFD500;'>
                 <th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th><th>Dom</th>
@@ -67,7 +68,7 @@ function listarReservasAnuales() {
                 1 => '#FF5733', // Del Pinar
                 2 => '#33FF57', // Del Solar
                 3 => '#3357FF', // Del Puente
-                4 => '#f532be'  // Casagrande
+                4 => '#F532BE'  // Casagrande
             ];
 
             foreach ($cabanias as $idCabania => $nombreCabania) {
