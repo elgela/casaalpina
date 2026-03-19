@@ -8,11 +8,11 @@ function listaPersonas() {
     echo "<table class='datos_personas'>
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th id=id_persona>ID</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>DNI</th>
-                    <th>Email</th>
+                    <th id=email_persona>Email</th>
                     <th>Teléfono</th>
                 </tr>
             </thead>
