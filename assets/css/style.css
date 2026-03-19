@@ -1655,20 +1655,33 @@ table tbody tr:nth-child(2n + 1) {
 }
 
 table td {
-	/* padding: 0.75em 0.75em; */
+	/* padding: 0.5em; */
 	border-bottom: 1px #000 solid;
 	border-right: 1px #000 solid;
+	font-weight: 500;
+	box-sizing: content-box;
+	width: auto;
+	font-size: 1.5vw;
 }
 
 table th {
 	color: #0a0a0a;
 	background-color: rgb(243, 243, 22);
-	/* font-size: 0.9em; */
-	font-weight: 600;
+	width: auto;
+	font-size: 2vw;
+	font-weight: bold;
 	padding: 0.5em;
 	text-align: center;
 	border-bottom: 2px #000 solid;
 	border-right: 1px #000 solid;
+}
+
+table #id_persona {
+	width: 5vw;
+}
+
+table #email_persona {
+	width: 25vw;
 }
 
 table thead {
