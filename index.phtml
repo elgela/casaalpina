@@ -665,22 +665,20 @@ include_once 'personas.php';
 			</article>
 				
 			<article id="calendario">
-				<a href="#reservar"><button>Reservar</button></a>
+				<button><a href="#reservar">Reservar</a></button>
 				<!-- <a href="#calendario"><button>Calendario</button></a> -->
-				<a href="#personas"><button>Personas</button></a>
+				<button><a href="#personas">Personas</a></button>
 				<h1>Calendario</h1>
-
 				<?php listarReservasAnuales(); ?>	
 			</article>
 			
 			<!--Usuarios-->
 			<article id="personas">
 				<div class="listaPersonas">
-					<a href="#reservar"><button>Reservar</button></a>
-					<a href="#calendario"><button>Calendario</button></a>
+					<button><a href="#reservar">Reservar</a></button>
+					<button><a href="#calendario">Calendario</a></button>
 					<!-- <a href="#personas"><button>Personas</button></a> -->
 					<h1>Personas</h1>
-
 					<?php listaPersonas(); ?>
 				</div>
 			</article>
