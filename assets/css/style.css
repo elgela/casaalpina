@@ -3353,6 +3353,22 @@ body.is-preload .redes {
 	filter: brightness(1.5);
 }
 
+.reserva.vacia {
+	background-color: #f8feff;
+	width: 100%;
+	box-sizing: border-box;
+	/* font-weight: bold; */
+	/* color: #000000; */
+	/* border-radius: 5px; */
+	/* padding: 4px 6px; */
+	/* margin: 3px 0; */
+	cursor: auto;
+	/* font-size: 0.9em; */
+	/* position: relative;
+	z-index: 1;
+	pointer-events: auto; */
+}
+
 #reservaForm {
 	padding: 15px;
 	background-color: #f8feff;
@@ -3418,22 +3434,6 @@ body.is-preload .redes {
 
 .tabla-reservas strong {
 	color: #000;
-}
-
-.reserva.vacia {
-	background-color: #f8feff;
-	width: 100%;
-	/* box-sizing: border-box; */
-	font-weight: bold;
-	color: #000000;
-	/* border-radius: 5px; */
-	padding: 4px 6px;
-	margin: 3px 0;
-	cursor: auto;
-	font-size: 1.15em;
-	/* position: relative;
-	z-index: 1;
-	pointer-events: auto; */
 }
 
 /* PERSONAS */
