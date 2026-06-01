@@ -20,12 +20,12 @@ function getReservas() {
                    p.telefono,
                    c.nombre AS cabania,
                    r.adultos,
-                   r.ninios,
+                   r.menores,
                    r.bebes,
-                   r.llegada,
-                   r.salida,
-                   r.noches,
-                   r.notas,
+                   r.fecha_ingreso,
+                   r.fecha_egreso,
+                --    r.noches,
+                --    r.notas,
                 --    r.lateCheck,
                    r.valor
             FROM reservas r

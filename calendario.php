@@ -41,13 +41,13 @@ function listarReservasAnuales() {
 
             $pdo = conexion();
             $stmt = $pdo->prepare("SELECT r.id_reserva, p.nombre, p.apellido, p.dni, c.id_cabania,
-                                          r.adultos, r.ninios, r.bebes, r.llegada,
-                                          r.salida, r.noches, r.notas, r.valor
+                                          r.adultos, r.menores, r.bebes, r.fecha_ingreso,
+                                          r.fecha_egreso, r.valor
                                    FROM reservas r
                                    JOIN personas p ON r.id_persona = p.id_persona
                                    JOIN cabanias c ON r.id_cabania = c.id_cabania
-                                   WHERE DATE(r.llegada) <= :fecha
-                                     AND DATE(r.salida) >= :fecha");
+                                   WHERE DATE(r.fecha_ingreso) <= :fecha
+                                     AND DATE(r.fecha_egreso) >= :fecha");
             $stmt->execute(['fecha' => $fecha]);
             $reservas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -92,12 +92,10 @@ function listarReservasAnuales() {
                             data-dni='{$reservaCabana['dni']}'
                             data-id-reserva='{$reservaCabana['id_reserva']}'
                             data-adultos='{$reservaCabana['adultos']}'
-                            data-ninios='{$reservaCabana['ninios']}'
+                            data-ninios='{$reservaCabana['menores']}'
                             data-bebes='{$reservaCabana['bebes']}'
-                            data-llegada='{$reservaCabana['llegada']}'
-                            data-salida='{$reservaCabana['salida']}'
-                            data-noches='{$reservaCabana['noches']}'
-                            data-notas='{$reservaCabana['notas']}'
+                            data-fecha_ingreso='{$reservaCabana['fecha_ingreso']}'
+                            data-fecha_egreso='{$reservaCabana['fecha_egreso']}'
                             data-valor='{$reservaCabana['valor']}'
                             onclick='abrirModal(this)'>
                             <p>{$reservaCabana['apellido']}</p>
