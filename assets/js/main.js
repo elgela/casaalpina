@@ -504,3 +504,57 @@ window.addEventListener("load", function() {
     setTimeout(() => loader.style.display = "none", 500);
   }
 });
+
+///// open-meteo
+
+const iconos = {
+	0: "sun.png",       // despejado
+	1: "mayormente-soleado.png", // mayormente soleado
+	2: "parcialmente-nublado.png",     // parcialmente nublado
+	3: "nublado.png",    // nublado
+	45: "niebla.png",      // niebla
+	61: "lluvia-ligera.png",     // lluvia ligera
+	63: "lluvia-moderada.png", // lluvia moderada
+	71: "nieve.png"      // nieve
+	// podés seguir agregando según la tabla oficial
+};
+
+const url = "https://api.open-meteo.com/v1/forecast?latitude=-37.321&longitude=-59.133&current_weather=true";
+async function mostrarClima() {
+	try {
+		const respuesta = await fetch(url);
+		const datos = await respuesta.json();
+		const temp = datos.current_weather.temperature;
+		const viento = datos.current_weather.windspeed;
+		const codigo = datos.current_weather.weathercode;
+		const icono = iconos[codigo] || "default.png";
+		document.getElementById("clima").innerHTML = `<img src="images/iconos_clima/${icono}"> ${temp}°C`;
+	} catch (error) {
+		document.getElementById("clima").textContent = "No se pudo cargar el clima";
+	}
+}
+document.addEventListener("DOMContentLoaded", function() {
+    mostrarClima();
+    setInterval(mostrarClima, 600000);
+});
+
+/////////OpenWeather
+	// const apiKey = "13cd2b30ab20e113378ef37fe2ea44be"; // reemplazá con tu clave
+    // const ciudad = "Tandil";
+    // const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&units=metric&lang=es&appid=${apiKey}`;
+
+    // async function mostrarClima() {
+	// 	try {
+	// 		const respuesta = await fetch(url);
+	// 		const datos = await respuesta.json();
+	// 		const temp = datos.main.temp;
+	// 		const desc = datos.weather[0].description;
+	// 		document.getElementById("clima").textContent = `${temp}°C, ${desc}`;
+	// 	} catch (error) {
+	// 		document.getElementById("clima").textContent = "No se pudo cargar el clima";
+	// 	}
+    // }
+
+    // // Actualiza cada 10 minutos
+    // mostrarClima();
+    // setInterval(mostrarClima, 600000);
