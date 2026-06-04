@@ -518,6 +518,29 @@ textarea {
 	background-color: #2a2828;
 }
 
+.climate {
+	display: block;
+	position: relative;
+	text-align: right;
+	width: 100%;
+}
+
+.climate .location {
+	font-size: 1.1em;
+	color: #f7faf7;
+	font-weight: 500;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+}
+
+.climate #clima {
+	margin-right: 7px;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #bb8623;
+}
+
 .bx-chevron-left {
 	position: absolute;
 	top: 45%;
