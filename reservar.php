@@ -16,16 +16,16 @@ $email         = $_POST['email'] ?? null;
 $telefono      = $_POST['telefono'] ?? null;
 $id_cabania    = $_POST['cabania'] ?? null;
 $adultos       = $_POST['adultos'] ?? null;
-$ninios        = $_POST['ninios'] ?? null;
+$menores       = $_POST['menores'] ?? null;
 $bebes         = isset($_POST['bebes']) ? 1 : 0;
-$llegada       = $_POST['llegada'] ?? null;
-$salida        = $_POST['salida'] ?? null;
-$noches        = $_POST['noches'] ?? null;
-$notas        = $_POST['notas'] ?? null;
+$fecha_ingreso = $_POST['fecha_ingreso'] ?? null;
+$fecha_egreso  = $_POST['fecha_egreso'] ?? null;
+// $noches        = $_POST['noches'] ?? null;
+// $notas         = $_POST['notas'] ?? null;
 // $lateCheck     = $_POST['lateCheck'] ?? null;
 $valor         = $_POST['valor'] ?? null;
 
-if (!$nombre || !$apellido || !$dni || !$email || !$id_cabania || !$adultos || !$llegada || !$salida || !$noches) {
+if (!$nombre || !$apellido || !$dni || !$email || !$id_cabania || !$adultos || !$fecha_ingreso || !$fecha_egreso) {
     die("❌ Faltan datos en el formulario");
 }
 
@@ -34,13 +34,13 @@ $sql = "SELECT COUNT(*) as total
         FROM reservas 
         WHERE id_cabania = :id_cabania 
           AND (
-              (llegada < :salida AND salida > :llegada)
+              (fecha_ingreso < :fecha_egreso AND fecha_egreso > :fecha_ingreso)
           )";
 $stmt = $db->prepare($sql);
 $stmt->execute([
     ':id_cabania' => $id_cabania,
-    ':llegada' => $llegada,
-    ':salida' => $salida
+    ':fecha_ingreso' => $fecha_ingreso,
+    ':fecha_egreso' => $fecha_egreso
 ]);
 $reserva = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -75,19 +75,19 @@ try {
     }
 
     // 2. Insertar reserva
-    $sql = "INSERT INTO reservas (id_persona, id_cabania, adultos, ninios, bebes, llegada, salida, noches, notas, valor)
-            VALUES (:id_persona, :id_cabania, :adultos, :ninios, :bebes, :llegada, :salida, :noches, :notas, :valor)";
+    $sql = "INSERT INTO reservas (id_persona, id_cabania, adultos, menores, bebes, fecha_ingreso, fecha_egreso, valor)
+            VALUES (:id_persona, :id_cabania, :adultos, :menores, :bebes, :fecha_ingreso, :fecha_egreso, :valor)";
     $stmt = $db->prepare($sql);
     $stmt->execute([
         ':id_persona' => $id_persona,
         ':id_cabania' => $id_cabania,
         ':adultos' => $adultos,
-        ':ninios' => $ninios,
+        ':menores' => $menores,
         ':bebes' => $bebes,
-        ':llegada' => $llegada,
-        ':salida' => $salida,
-        ':noches' => $noches,
-        ':notas' => $notas,
+        ':fecha_ingreso' => $fecha_ingreso,
+        ':fecha_egreso' => $fecha_egreso,
+        // ':noches' => $noches,
+        // ':notas' => $notas,
         ':valor' => $valor
     ]);
 
