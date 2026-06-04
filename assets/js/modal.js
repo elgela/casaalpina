@@ -15,18 +15,18 @@ function abrirModal(card) {
   document.getElementById('modalApellido').textContent = "Apellido: " + card.dataset.apellido;
   document.getElementById('modalDNI').textContent = "DNI: " + card.dataset.dni;
   document.getElementById('modalAdultos').textContent = "Adultos: " + card.dataset.adultos;
-  document.getElementById('modalNinios').textContent = "Niños: " + card.dataset.ninios;
+  document.getElementById('modalMenores').textContent = "Menores: " + card.dataset.menores;
   document.getElementById('modalBebes').textContent = "Bebés: " + card.dataset.bebes;
 
   // Convertir string a objeto Date
-  let llegada = new Date(card.dataset.llegada);
-  let salida  = new Date(card.dataset.salida);
+  let fecha_ingreso = new Date(card.dataset.fecha_ingreso);
+  let fecha_egreso  = new Date(card.dataset.fecha_egreso);
 
   // Formatear en formato argentino DD/MM/YYYY HH:MM
   document.getElementById('modalIngreso').textContent =
-      "Ingreso: " + llegada.toLocaleDateString('es-AR', opciones);
+      "Ingreso: " + fecha_ingreso.toLocaleDateString('es-AR', opciones);
   document.getElementById('modalEgreso').textContent =
-      "Egreso: " + salida.toLocaleDateString('es-AR', opciones);
+      "Egreso: " + fecha_egreso.toLocaleDateString('es-AR', opciones);
 
   document.getElementById('modalNoches').textContent = "Noches: " + card.dataset.noches;
   document.getElementById('modalNotas').textContent = "Notas: " + card.dataset.notas;

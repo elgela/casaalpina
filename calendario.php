@@ -42,7 +42,7 @@ function listarReservasAnuales() {
             $pdo = conexion();
             $stmt = $pdo->prepare("SELECT r.id_reserva, p.nombre, p.apellido, p.dni, c.id_cabania,
                                           r.adultos, r.menores, r.bebes, r.fecha_ingreso,
-                                          r.fecha_egreso, r.valor
+                                          r.fecha_egreso, r.noches, r.notas, r.valor
                                    FROM reservas r
                                    JOIN personas p ON r.id_persona = p.id_persona
                                    JOIN cabanias c ON r.id_cabania = c.id_cabania
@@ -92,10 +92,12 @@ function listarReservasAnuales() {
                             data-dni='{$reservaCabana['dni']}'
                             data-id-reserva='{$reservaCabana['id_reserva']}'
                             data-adultos='{$reservaCabana['adultos']}'
-                            data-ninios='{$reservaCabana['menores']}'
+                            data-menores='{$reservaCabana['menores']}'
                             data-bebes='{$reservaCabana['bebes']}'
                             data-fecha_ingreso='{$reservaCabana['fecha_ingreso']}'
                             data-fecha_egreso='{$reservaCabana['fecha_egreso']}'
+                            data-noches='{$reservaCabana['noches']}'
+                            data-notas='{$reservaCabana['notas']}'
                             data-valor='{$reservaCabana['valor']}'
                             onclick='abrirModal(this)'>
                             <p>{$reservaCabana['apellido']}</p>

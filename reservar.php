@@ -20,9 +20,9 @@ $menores       = $_POST['menores'] ?? null;
 $bebes         = isset($_POST['bebes']) ? 1 : 0;
 $fecha_ingreso = $_POST['fecha_ingreso'] ?? null;
 $fecha_egreso  = $_POST['fecha_egreso'] ?? null;
-// $noches        = $_POST['noches'] ?? null;
-// $notas         = $_POST['notas'] ?? null;
-// $lateCheck     = $_POST['lateCheck'] ?? null;
+$noches        = $_POST['noches'] ?? null;
+$notas         = $_POST['notas'] ?? null;
+$lateCheck     = $_POST['lateCheck'] ?? null;
 $valor         = $_POST['valor'] ?? null;
 
 if (!$nombre || !$apellido || !$dni || !$email || !$id_cabania || !$adultos || !$fecha_ingreso || !$fecha_egreso) {
@@ -75,8 +75,8 @@ try {
     }
 
     // 2. Insertar reserva
-    $sql = "INSERT INTO reservas (id_persona, id_cabania, adultos, menores, bebes, fecha_ingreso, fecha_egreso, valor)
-            VALUES (:id_persona, :id_cabania, :adultos, :menores, :bebes, :fecha_ingreso, :fecha_egreso, :valor)";
+    $sql = "INSERT INTO reservas (id_persona, id_cabania, adultos, menores, bebes, fecha_ingreso, fecha_egreso, noches, notas, lateCheck, valor)
+            VALUES (:id_persona, :id_cabania, :adultos, :menores, :bebes, :fecha_ingreso, :fecha_egreso, :noches, :notas, :lateCheck, :valor)";
     $stmt = $db->prepare($sql);
     $stmt->execute([
         ':id_persona' => $id_persona,
@@ -86,8 +86,9 @@ try {
         ':bebes' => $bebes,
         ':fecha_ingreso' => $fecha_ingreso,
         ':fecha_egreso' => $fecha_egreso,
-        // ':noches' => $noches,
-        // ':notas' => $notas,
+        ':noches' => $noches,
+        ':notas' => $notas,
+        ':lateCheck' => $lateCheck,
         ':valor' => $valor
     ]);
 

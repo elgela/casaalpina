@@ -647,7 +647,7 @@ include_once 'personas.php';
 					</select>
 					<br>
 					<p>Adultos: </p><input class="cant" type="number" name="adultos" id="adultos" min="1" max="6" required>
-					<p>Niños: </p><input class="cant" type="number" name="ninios" id="ninios" min="0" max="5">
+					<p>Menores: </p><input class="cant" type="number" name="menores" id="menores" min="0" max="5">
 					<p>Bebés:</p>
 					<select name="bebes" id="bebes" style="cursor: pointer;">
 						<option value="" disabled selected></option>
@@ -655,8 +655,8 @@ include_once 'personas.php';
 						<option value="0">No</option>
 					</select>
 					<br>
-					<p>Ingreso: </p><input type="date" name="llegada" id="llegada" required>
-					<p>Egreso: </p><input type="date" name="salida" id="salida" required>
+					<p>Ingreso: </p><input type="date" name="fecha_ingreso" id="fecha_ingreso" required>
+					<p>Egreso: </p><input type="date" name="fecha_egreso" id="fecha_egreso" required>
 					<p>Noches: </p><input class="cant" type="number" name="noches" id="noches" min="1">
 					<br>
 					<p>Notas: </p><textarea name="notas" id="notas"></textarea>
@@ -752,13 +752,13 @@ include_once 'personas.php';
 			<p id="modalDNI"></p>
 			<p id="modalId"></p>
 			<p id="modalAdultos"></p>
-			<p id="modalNinios"></p>
+			<p id="modalMenores"></p>
 			<p id="modalBebes"></p>
 			<p id="modalIngreso"></p>
 			<p id="modalEgreso"></p>
 			<p id="modalNoches"></p>
 			<p id="modalNotas"></p>
-			<!-- <input type="hidden" name="lateCheck" id="modalLate"> -->
+			<input type="hidden" name="lateCheck" id="modalLate">
 			<p id="modalValor"></p>
 		</div>
 	</div>

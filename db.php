@@ -24,9 +24,9 @@ function getReservas() {
                    r.bebes,
                    r.fecha_ingreso,
                    r.fecha_egreso,
-                --    r.noches,
-                --    r.notas,
-                --    r.lateCheck,
+                   r.noches,
+                   r.notas,
+                   r.lateCheck,
                    r.valor
             FROM reservas r
             JOIN personas p ON r.id_persona = p.id_persona

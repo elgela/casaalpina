@@ -3306,8 +3306,8 @@ body.is-preload .redes {
 	opacity: 0;
 }
 
-#llegada,
-#salida {
+#fecha_ingreso,
+#fecha_egreso {
 	cursor: pointer;
 	color: #000000;
 }
