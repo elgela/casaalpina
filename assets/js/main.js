@@ -514,11 +514,15 @@ const iconos = {
 	3: "nublado.png",    // nublado
 	45: "niebla.png",      // niebla
 	61: "lluvia-ligera.png",     // lluvia ligera
+	65: "lluvia-pesada-dia.png",  // lluvia pesada
 	63: "lluvia-moderada.png", // lluvia moderada
-	71: "nieve.png"      // nieve
+	71: "nieve.png",      // nieve
+	73: "helada.png",     // helada
+	95: "tormenta-electrica.png"     // tormenta eléctrica
 	// podés seguir agregando según la tabla oficial
 };
 
+// https://api.open-meteo.com/v1/forecast?latitude=-37.3282&longitude=-59.1356&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,apparent_temperature,visibility&timezone=auto
 const url = "https://api.open-meteo.com/v1/forecast?latitude=-37.321&longitude=-59.133&current_weather=true";
 async function mostrarClima() {
 	try {
