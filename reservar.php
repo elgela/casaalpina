@@ -75,8 +75,8 @@ try {
     }
 
     // 2. Insertar reserva
-    $sql = "INSERT INTO reservas (id_persona, id_cabania, adultos, menores, bebes, fecha_ingreso, fecha_egreso, noches, notas, lateCheck, valor)
-            VALUES (:id_persona, :id_cabania, :adultos, :menores, :bebes, :fecha_ingreso, :fecha_egreso, :noches, :notas, :lateCheck, :valor)";
+    $sql = "INSERT INTO reservas (id_persona, id_cabania, adultos, menores, bebes, fecha_ingreso, fecha_egreso, noches, notas, valor)
+            VALUES (:id_persona, :id_cabania, :adultos, :menores, :bebes, :fecha_ingreso, :fecha_egreso, :noches, :notas, :valor)";
     $stmt = $db->prepare($sql);
     $stmt->execute([
         ':id_persona' => $id_persona,
