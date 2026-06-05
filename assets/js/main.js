@@ -522,6 +522,21 @@ const iconos = {
 	// podés seguir agregando según la tabla oficial
 };
 
+// Diccionario de descripciones para el title
+const descripciones = {
+    0: "Despejado",
+    1: "Mayormente soleado",
+    2: "Parcialmente nublado",
+    3: "Nublado",
+    45: "Niebla",
+    61: "Lluvia ligera",
+    65: "Lluvia intensa",
+    63: "Lluvia moderada",
+    71: "Nieve",
+    73: "Helada",
+    95: "Tormenta eléctrica"
+};
+
 // https://api.open-meteo.com/v1/forecast?latitude=-37.3282&longitude=-59.1356&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,apparent_temperature,visibility&timezone=auto
 const url = "https://api.open-meteo.com/v1/forecast?latitude=-37.321&longitude=-59.133&current_weather=true";
 async function mostrarClima() {
@@ -532,11 +547,17 @@ async function mostrarClima() {
 		const viento = datos.current_weather.windspeed;
 		const codigo = datos.current_weather.weathercode;
 		const icono = iconos[codigo] || "default.png";
-		document.getElementById("clima").innerHTML = `<img src="images/iconos_clima/${icono}"> ${temp}°C`;
+		const descripcion = descripciones[codigo] || "Condición desconocida";
+
+		const climaSpan = document.getElementById("clima");
+		climaSpan.innerHTML = `<img src="images/iconos_clima/${icono}" alt="${descripcion}"> ${temp}°C`;
+		climaSpan.title = descripcion; // acá se asigna el title dinámicamente
 	} catch (error) {
 		document.getElementById("clima").textContent = "No se pudo cargar el clima";
 	}
 }
+
+// actualiza cada diez minutos
 document.addEventListener("DOMContentLoaded", function() {
     mostrarClima();
     setInterval(mostrarClima, 600000);
