@@ -526,11 +526,12 @@ textarea {
 }
 
 .climate .location {
+	/* margin-right: 50px; */
 	font-size: 1.1em;
 	color: #f7faf7;
 	font-weight: 500;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	word-spacing: 2px;
 }
 
