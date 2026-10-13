@@ -1,0 +1,140 @@
+<?php
+
+// if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+//     die("❌ Este script solo funciona con datos enviados desde el formulario.");
+// }
+
+include_once 'db.php';
+
+$db = conexion();
+
+// Capturar datos del formulario
+$nombre        = $_POST['nombre'] ?? null;
+$apellido      = $_POST['apellido'] ?? null;
+$dni           = $_POST['dni'] ?? null;
+$email         = $_POST['email'] ?? null;
+$telefono      = $_POST['telefono'] ?? null;
+$id_cabania    = $_POST['cabania'] ?? null;
+$adultos       = $_POST['adultos'] ?? null;
+$menores       = $_POST['menores'] ?? null;
+$bebes         = isset($_POST['bebes']) ? 1 : 0;
+$fecha_ingreso = $_POST['fecha_ingreso'] ?? null;
+$fecha_egreso  = $_POST['fecha_egreso'] ?? null;
+$noches        = $_POST['noches'] ?? null;
+$notas         = $_POST['notas'] ?? null;
+$valor         = $_POST['valor'] ?? null;
+
+// Forzar horarios
+if ($fecha_ingreso) {
+    $fecha_ingreso .= " 14:00:00";
+}
+if ($fecha_egreso) {
+    $fecha_egreso .= " 10:00:00";
+}
+
+if (!$nombre || !$apellido || !$dni || !$email || !$id_cabania || !$adultos || !$fecha_ingreso || !$fecha_egreso) {
+    die("❌ Faltan datos en el formulario");
+}
+
+// Verificar si la cabaña ya está reservada en esas fechas
+$sql = "SELECT COUNT(*) as total 
+        FROM reservas 
+        WHERE id_cabania = :id_cabania 
+          AND (
+              (fecha_ingreso < :fecha_egreso AND fecha_egreso > :fecha_ingreso)
+          )";
+$stmt = $db->prepare($sql);
+$stmt->execute([
+    ':id_cabania' => $id_cabania,
+    ':fecha_ingreso' => $fecha_ingreso,
+    ':fecha_egreso' => $fecha_egreso
+]);
+$reserva = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if ($reserva['total'] > 0) {
+    die("❌ Cabaña ya reservada en esa fecha");
+}
+
+try {
+    // Iniciar transacción
+    $db->beginTransaction();
+
+    // 1. Buscar persona por dni
+    $sql = "SELECT id_persona FROM personas WHERE dni = :dni";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([':dni' => $dni]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($row) {
+        $id_persona = $row['id_persona'];
+    } else {
+        // Insertar persona
+        $sql = "INSERT INTO personas (nombre, apellido, dni, email, telefono) VALUES (:nombre, :apellido, :dni, :email, :telefono)";
+        $stmt = $db->prepare($sql);
+        $stmt->execute([
+            ':nombre' => $nombre,
+            ':apellido' => $apellido,
+            ':dni' => $dni,
+            ':email' => $email,
+            ':telefono' => $telefono
+        ]);
+        $id_persona = $db->lastInsertId();
+    }
+
+    // 2. Insertar reserva
+    $sql = "INSERT INTO reservas (id_persona, id_cabania, adultos, menores, bebes, fecha_ingreso, fecha_egreso, noches, notas, valor)
+            VALUES (:id_persona, :id_cabania, :adultos, :menores, :bebes, :fecha_ingreso, :fecha_egreso, :noches, :notas, :valor)";
+    $stmt = $db->prepare($sql);
+    $stmt->execute([
+        ':id_persona' => $id_persona,
+        ':id_cabania' => $id_cabania,
+        ':adultos' => $adultos,
+        ':menores' => $menores,
+        ':bebes' => $bebes,
+        ':fecha_ingreso' => $fecha_ingreso,
+        ':fecha_egreso' => $fecha_egreso,
+        ':noches' => $noches,
+        ':notas' => $notas,
+        ':valor' => $valor
+    ]);
+
+    // Confirmar transacción
+    $db->commit();
+
+    // Enviar correo con los datos de la reserva
+    $destinatario = "contacto@turesponsive.com.ar"; 
+    $asunto = "Nueva reserva registrada";
+    $mensaje = "Se ha cargado una nueva reserva:\n\n";
+    $mensaje .= "Nombre: $nombre\n";
+    $mensaje .= "Apellido: $apellido\n";
+    $mensaje .= "DNI: $dni\n";
+    $mensaje .= "Email: $email\n";
+    $mensaje .= "Telefono: $telefono\n";
+    $mensaje .= "Cabania: $id_cabania\n";
+    $mensaje .= "Adultos: $adultos\n";
+    $mensaje .= "Menores: $menores\n";
+    $mensaje .= "Bebes: $bebes\n";
+    $mensaje .= "Ingreso: $fecha_ingreso\n";
+    $mensaje .= "Egreso: $fecha_egreso\n";
+    $mensaje .= "Noches: $noches\n";
+    $mensaje .= "Notas: $notas\n";
+    $mensaje .= "Valor: $valor\n";
+
+    $headers = "From: noreply@casaalpina.com.ar\r\n";
+    $headers .= "Reply-To: $email\r\n";
+
+    if (mail($destinatario, $asunto, $mensaje, $headers)) {
+        echo "✅ Datos cargados y correo enviado";
+    } else {
+        echo "✅ Datos cargados, pero error al enviar correo";
+    }
+
+    // Botón para volver al formulario
+    echo "<br><button onclick=\"window.location.href='reservar.php'\">Volver al formulario</button>";
+
+    // echo "✅ Datos cargados";
+} catch (Exception $e) {
+    $db->rollBack();
+    die("❌ Error al cargar datos: " . $e->getMessage());
+}
+?>

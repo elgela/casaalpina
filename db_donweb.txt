@@ -1,0 +1,10 @@
+<?php
+
+	$dbhost = 'localhost';
+	$dbuser = 'kn000346_reserva';
+	$dbpass = '33tiFIsesi';
+	$dbname = 'kn000346_reserva';
+
+	$conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Ocurrio un error al conectarse al servidor mysql');
+	mysql_select_db($dbname);
+?>
